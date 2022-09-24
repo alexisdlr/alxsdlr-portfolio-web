@@ -50,8 +50,11 @@ const MenuLinks = ({ open }) => {
                 </MenuItem>
               ))
               }  
-
-            <Button
+              <Link 
+              target={'_blank'} 
+              _hover={{textDecor: 'none'}}
+              href="https://drive.google.com/file/d/1yVkxlNI5xSJLFPRY5CW10KOLibACLlEV/view?usp=sharing">
+              <Button
                 rounded={'full'}
                 bg={'purple'}
                 color={'white'}
@@ -62,9 +65,12 @@ const MenuLinks = ({ open }) => {
                   transform: 'translateY(-5px)'
                 }}
                 _active={{opacity: .5}}
+                
                 >
-                  Download CV
-              </Button>
+                Download CV
+                </Button>
+              </Link>
+             
         </Stack>  
            
     </Box>

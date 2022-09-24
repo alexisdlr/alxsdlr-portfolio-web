@@ -11,13 +11,25 @@ const theme = extendTheme({
   styles: {
     global: {
       // styles for the `body`
+      html: {
+        scrollBehavior: 'smooth'
+      },
       body: {
         bg: '#000114',
         color: '#fff',
-        overflowX: 'hidden' 
+        overflowX: 'hidden',
+        '&::-webkit-scrollbar':  {
+          width: '12px',
+          backgroundColor: '#000114'
+         },
+         '&::-webkit-scrollbar-thumb': {
+          borderRadius: '50px',
+          backgroundColor: '#5800FF' }
       },
+     
+      
       // styles for the `a`
-   
+      
     },
   },
 })
