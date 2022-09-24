@@ -6,7 +6,7 @@ const Logo = () => {
       <Image 
       boxSize={'20'} 
       borderRadius='full' 
-      boxShadow={'1px 1px 8px #5800FF'} 
+      boxShadow={'0px 6px 8px #5800FF'} 
       src={logo} 
       alt='logo' />
     </Box>

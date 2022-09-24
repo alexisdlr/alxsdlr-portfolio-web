@@ -6,7 +6,9 @@ const NavContainer = ({children}) => {
     px={8} 
     maxW={'100%'} 
     justifyContent={'space-between'} 
-    alignItems='center'> 
+    alignItems='center'
+    
+    > 
     
     {children}
     </Flex>
