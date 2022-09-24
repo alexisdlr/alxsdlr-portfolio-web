@@ -1,5 +1,12 @@
-import { Flex,Heading, Text, Stack, Button } from '@chakra-ui/react'
+import { 
+  Flex,
+  Heading, 
+  Text, 
+  Stack, 
+   } from '@chakra-ui/react'
+
 const Hero = () => {
+  
   return(
       <Stack 
       minH={{base: '80vh', md: '100vh'}} 
@@ -20,22 +27,11 @@ const Hero = () => {
               </Text>
               <br />{' '}
               <Text color={'purple'} as={'span'}>
-                 Front end Developer
+                 Web Developer
               </Text>{' '}
               Based in Mexico
             </Heading>
-            <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-              <Button
-                rounded={'full'}
-                bg={'purple'}
-                color={'white'}
-                fontWeight={'bold'}
-                _hover={{
-                  opacity: .8
-                }}>
-                  Get started!
-              </Button>
-          </Stack>
+            
         </Flex>
        
       </Stack>

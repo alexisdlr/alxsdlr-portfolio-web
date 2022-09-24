@@ -1,0 +1,20 @@
+import { Box } from "@chakra-ui/react"
+const Header = ({children}) => {
+  return(
+    <Box 
+    as="header" 
+    w={'full'} 
+    py={4} 
+    mx={'auto'} 
+    px={4} 
+    backdropFilter='auto' 
+    backdropBlur='8px' 
+    top={4} 
+    wrap="wrap"
+    pos="fixed" 
+    zIndex={99}  >
+      {children}
+    </Box>
+  )
+}
+export default Header

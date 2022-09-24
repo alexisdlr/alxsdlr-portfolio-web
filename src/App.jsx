@@ -1,9 +1,10 @@
 import React, {Suspense, lazy} from 'react'
 import { ChakraProvider, Flex } from '@chakra-ui/react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Oval } from 'react-loader-spinner'
 
 const Home = lazy(() => import('./pages/Home'))
+const Projects = lazy(() => import('./pages/Projects'))
+const Skills = lazy(() => import('./pages/Skills'))
 
 import theme from '../theme/theme'
 function App() {
@@ -11,10 +12,8 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <div className="App">
-        <BrowserRouter>
-          <Routes>
-          <Route index path="/" element={
-              <Suspense fallback={
+      
+            <Suspense fallback={
                 <Flex h={'container.md'} justify={'center'} alignItems={'center'} >
                   <Oval
                   color='#5800FF'
@@ -25,10 +24,30 @@ function App() {
                 <Home />
 
               </Suspense>
-            }
-            />
-          </Routes>
-        </BrowserRouter>
+              <Suspense fallback={
+                <Flex h={'container.md'} justify={'center'} alignItems={'center'} >
+                  <Oval
+                  color='#5800FF'
+                  secondaryColor='#FFC600'
+                  />
+                </Flex>
+              }>
+                <Projects />
+
+              </Suspense>
+          
+              <Suspense fallback={
+                <Flex h={'container.md'} justify={'center'} alignItems={'center'} >
+                  <Oval
+                  color='#5800FF'
+                  secondaryColor='#FFC600'
+                  />
+                </Flex>
+              }>
+                <Skills />
+
+              </Suspense>
+        
       </div>
     </ChakraProvider>
     
