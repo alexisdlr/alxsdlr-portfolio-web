@@ -23,7 +23,7 @@ function Navbar() {
     <motion.div initial={{y:-500}} animate={{y:0}} transition={{delay:.3, duration: 1}}> 
       <Header>
          <NavContainer>
-            <Logo />
+            <Logo open={open} />
           <MenuLinks open={open}/>  
           <MenuToggle toggle={toggle} isOpen={open} />
          </NavContainer>

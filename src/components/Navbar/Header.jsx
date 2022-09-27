@@ -3,8 +3,7 @@ const Header = ({children}) => {
   return(
     <Box 
     as="header" 
-    w={'full'} 
-    py={4} 
+    w={'full'}  
     mx={'auto'} 
     px={4} 
     backdropFilter='auto' 

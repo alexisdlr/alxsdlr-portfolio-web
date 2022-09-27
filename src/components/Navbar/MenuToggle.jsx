@@ -24,7 +24,12 @@ const MenuIcon = () => (
 
 const MenuToggle = ({ toggle, isOpen }) => {
   return (
-    <Box display={{ base: "block", md: "none" }} onClick={toggle}>
+    <Box 
+    display={{ base: "block", md: "none" }}
+    position={isOpen ? 'absolute' : 'initial'}
+    right={12}
+    top={8}
+    onClick={toggle}>
       {isOpen ? <CloseIcon /> : <MenuIcon />}
     </Box>
   )

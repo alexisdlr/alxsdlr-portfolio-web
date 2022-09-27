@@ -19,7 +19,15 @@ const Hero = () => {
                 Hello I'm <Text as='span' color={'purple'}>Alexis De León</Text> a
               </Text>
               <br />{' '}
-              <Text color={'yellow'} as={'span'}>
+              <Text color={'yellow'} as={'span'} position={'relative'} _before={{
+                content: '""',
+                width:'full',
+                height: '5px',
+                borderRadius: '8px',
+                background: 'yellow',
+                position: 'absolute',
+                bottom: 0
+              }}>
                  Web Developer
               </Text>{' '}
               Based in Mexico
