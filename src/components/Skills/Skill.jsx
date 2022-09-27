@@ -31,7 +31,7 @@ const Skill = () => {
             border: '1px solid yellow', 
             transition: '300ms',
             boxShadow: '2px 5px 8px yellow',
-            transform: 'translateY(-5px)'
+            transform: 'translateY(-3px)'
             }} 
 >
             <Image

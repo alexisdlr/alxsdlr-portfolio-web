@@ -10,7 +10,7 @@ const HeroContainer = ({children}) => {
     gap={10}
     mx={'auto'}
     px={4} 
-    py={{base: '48', md: '36'}}
+    pt={{base: '48', md: '36'}}
     > 
     {children}
     </Stack>

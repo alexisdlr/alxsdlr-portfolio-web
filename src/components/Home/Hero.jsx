@@ -1,8 +1,7 @@
 import { 
   Flex,
   Heading, 
-  Text, 
-  Stack, 
+  Text 
    } from '@chakra-ui/react'
 import Avatar from './Avatar'
 import HeroContainer from './HeroContainer'

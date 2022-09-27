@@ -30,5 +30,11 @@ export const skills = [
   },
   {
     id: 10, alt: 'MYSQL', image: images.mysql
+  },
+  {
+    id: 11, alt: 'GIT', image: images.git
+  },
+  {
+    id: 12, alt: 'Chakra-Ui', image: images.chakra
   }
 ]

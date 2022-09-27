@@ -8,8 +8,8 @@ import express from './skillset/express.png'
 import react from './skillset/react.png'
 import bootstrap from './skillset/bootstrap.png'
 import mysql from './skillset/mysql.png'
-
-
+import git from './skillset/git.png'
+import chakra from './skillset/chakra.png'
 
 
 export const images = {
@@ -22,5 +22,7 @@ export const images = {
   express,
   react,
   mysql,
-  bootstrap
+  bootstrap,
+  git,
+  chakra
 }
