@@ -9,7 +9,7 @@ const About = ( ) => {
       transition={{duration: 1}}
       viewport={{once: true}}
     >
-      <Flex direction={'column'} align={'center'} my={16} px={8} >
+      <Flex direction={'column'} align={{base: 'center', md: 'flex-start'}} maxW={1350} mx={'auto'} my={16}  >
       <Heading 
         my={4} 
         color={'yellow'}

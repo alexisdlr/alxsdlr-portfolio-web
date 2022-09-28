@@ -14,17 +14,21 @@ const Skills = () => {
        <Flex 
        my={4} 
        justify={'center'} 
-       align={'center'} 
+       align={{base: 'center', md:'flex-start'}} 
        direction={'column'}
        id='skills'
+       maxW={1350}
+       mx={'auto'}
        >
        <Heading 
         color={'yellow'}
-        fontSize={{base: '4xl', md: '8xl'}}>
+        fontSize={{base: '4xl', md: '8xl'}}
+        
+        >
           Skills
        </Heading>
-       <Text my={5} px={{base: 8, md :40}} color='gray.100' textAlign={'center'} fontSize={{base: '1.1rem', md: '2xl'}}>
-          I am passionate about technology, in my day to day I try to learn new things, in addition, I like to build my projects with different languages ​​/ skills      
+       <Text my={5} px={{base: 8, md :0}} color='gray.100' textAlign={{base: 'center', md: 'left'}} fontSize={{base: '1.1rem', md: '2xl'}}>
+          I am passionate about technology, in my day to day I try to learn new things, in addition, I like to build my projects with different languages ​​/ skills:     
        </Text>
        <Skill />
     </Flex>

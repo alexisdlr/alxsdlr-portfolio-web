@@ -8,13 +8,13 @@ export const skills = [
     id: 2, alt: 'CSS3', image: images.css
   },
   {
-    id: 3, alt: 'JavaScript', image: images.js
+    id: 3, alt: 'Javascript', image: images.js
   },
   {
     id: 4, alt: 'NodeJs', image: images.node
   },
   {
-    id: 5, alt: 'SASS', image: images.sass
+    id: 5, alt: 'Sass', image: images.sass
   },
   {
     id: 6, alt: 'Tailwind CSS', image: images.tailwind
@@ -32,7 +32,7 @@ export const skills = [
     id: 10, alt: 'MYSQL', image: images.mysql
   },
   {
-    id: 11, alt: 'GIT', image: images.git
+    id: 11, alt: 'Git', image: images.git
   },
   {
     id: 12, alt: 'Chakra-Ui', image: images.chakra

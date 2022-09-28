@@ -11,6 +11,7 @@ const HeroContainer = ({children}) => {
     mx={'auto'}
     px={4} 
     pt={{base: '48', md: '36'}}
+    id='home'
     > 
     {children}
     </Stack>

@@ -6,7 +6,7 @@ const Skill = () => {
   return(
     <Stack
     spacing={5}
-    gap={8}
+    gap={{base : 2, md: 8}}
     align="center"
     justify={'center'}
     direction={'row'}
