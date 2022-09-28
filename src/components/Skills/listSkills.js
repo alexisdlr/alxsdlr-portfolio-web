@@ -8,7 +8,7 @@ export const skills = [
     id: 2, alt: 'CSS3', image: images.css
   },
   {
-    id: 3, alt: 'JavaScript', image: ''
+    id: 3, alt: 'JavaScript', image: images.js
   },
   {
     id: 4, alt: 'NodeJs', image: images.node
