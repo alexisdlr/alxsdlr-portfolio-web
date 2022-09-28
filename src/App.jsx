@@ -8,6 +8,7 @@ const Skills = lazy(() => import('./Layouts/Skills'))
 const About = lazy(() => import('./Layouts/About'))
 
 import theme from '../theme/theme'
+import Contact from './Layouts/Contact'
 function App() {
 
   return (
@@ -26,6 +27,7 @@ function App() {
                 <About />
                 <Skills />
                 <Projects />
+                <Contact />
 
 
               </Suspense>

@@ -12,7 +12,7 @@ const Skills = () => {
     viewport={{once: true}}
     > 
        <Flex 
-       pt={{base: '24', md: '36'}}
+       my={{base: '24', md: '32'}}
        justify={'center'} 
        align={{base: 'center', md:'flex-start'}} 
        direction={'column'}

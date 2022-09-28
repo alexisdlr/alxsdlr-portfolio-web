@@ -20,7 +20,7 @@ function Navbar() {
 
  
   return ( 
-    <motion.div initial={{y:-200}} animate={{y:0}} transition={{delay:.3, duration: 1}}> 
+    <motion.div initial={{y:-500}} animate={{y:0}} transition={{delay:.3, duration: 1}}> 
       <Header>
          <NavContainer>
             <Logo open={open} />

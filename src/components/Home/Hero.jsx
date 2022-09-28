@@ -11,7 +11,7 @@ const Hero = () => {
   return( 
         <HeroContainer>
           <Flex w={'full'} mx={0} align={'center'} justify={'center'} direction='column' gap={8} >
-            <Heading fontSize={{ base: '3xl', md: '5xl', lg: '6xl' }} textAlign={'center'}>
+            <Heading fontSize={{ base: '2xl', md: '5xl', lg: '6xl' }} textAlign={'center'}>
               <Text
                 as={'span'}
                >

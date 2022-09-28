@@ -12,11 +12,11 @@ const Projects = () => {
     > 
     
       <Flex
-      pt={{base: '24', md: '36'}}
+      id='projects'
+      my={{base: '24', md: '36'}}
       justify={'center'} 
       align={{base: 'center', md:'flex-start'}} 
       direction={'column'}
-      id='skills'
       maxW={1350}
       mx={'auto'}
       >
@@ -27,7 +27,7 @@ const Projects = () => {
         >
           Projects
        </Heading>
-       <Text my={5} px={{base: 8, md :0}} color='gray.100' textAlign={{base: 'center', md: 'left'}} fontSize={{base: '1.1rem', md: '2xl'}}>
+       <Text mb={16} px={{base: 8, md :0}} color='gray.100' textAlign={{base: 'center', md: 'left'}} fontSize={{base: '1.1rem', md: '2xl'}}>
          A little section of my recents web projects
        </Text>
 

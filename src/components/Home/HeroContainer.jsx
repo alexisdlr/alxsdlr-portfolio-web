@@ -12,6 +12,7 @@ const HeroContainer = ({children}) => {
     px={4} 
     pt={{base: '48', md: '36'}}
     id='home'
+    mb={16}
     > 
     {children}
     </Stack>
