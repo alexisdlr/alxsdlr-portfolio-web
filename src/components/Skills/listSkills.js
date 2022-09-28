@@ -29,7 +29,7 @@ export const skills = [
     id: 9, alt: 'Express.js', image: images.express
   },
   {
-    id: 10, alt: 'MYSQL', image: images.mysql
+    id: 10, alt: 'Mysql', image: images.mysql
   },
   {
     id: 11, alt: 'Git', image: images.git

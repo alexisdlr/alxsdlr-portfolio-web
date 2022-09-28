@@ -2,17 +2,17 @@ import { Flex, Heading, Text} from '@chakra-ui/react'
 import Skill from '../components/Skills/Skill'
 import { motion } from 'framer-motion'
 
-
 const Skills = () => {
   return(
-    <motion.div
+    <>
+      <motion.div
     initial={{opacity: 0}}
     whileInView={{opacity:1}}
     transition={{duration: 1}}
     viewport={{once: true}}
-    >
+    > 
        <Flex 
-       my={4} 
+       pt={{base: '24', md: '36'}}
        justify={'center'} 
        align={{base: 'center', md:'flex-start'}} 
        direction={'column'}
@@ -33,6 +33,8 @@ const Skills = () => {
        <Skill />
     </Flex>
     </motion.div>
+    </>
+   
   )
 
 }

@@ -1,19 +1,9 @@
 import { 
 Box,
-Stack,
-Link,
-Text,
-Button
+Stack
 } from "@chakra-ui/react";
-const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
-  return (
-    <Link href={to} listStyleType='none' _hover={{textDecor: 'none'}} >
-      <Text display="block" {...rest}>
-        {children}
-      </Text>
-    </Link>
-  );
-}
+import { ButtonPrimary } from "../Button";
+import MenuItem from "./MenuItem";
 
 const MenuLinks = ({ open }) => {
  
@@ -42,34 +32,31 @@ const MenuLinks = ({ open }) => {
           { Datanav.map(item => (
                 <MenuItem 
                 key={item.id}
-                
-                _hover={{  color: "purple", transition:'300ms' }} 
+                _hover={{ color: "purple", transition:'300ms' }} 
                 to={item.link} 
                 >
                   {item.text}
                 </MenuItem>
               ))
-              }  
-              <Link 
-              target={'_blank'} 
-              _hover={{textDecor: 'none'}}
-              href="https://drive.google.com/file/d/1yVkxlNI5xSJLFPRY5CW10KOLibACLlEV/view?usp=sharing">
-              <Button
-                rounded={'full'}
-                bg={'purple'}
-                color={'white'}
-                fontWeight={'bold'}
-                boxShadow='rgb(99 51 255 / 19%) 5px 5px 15px 5px'
-                _hover={{
-                  opacity: .8,
-                  transform: 'translateY(-5px)'
-                }}
-                _active={{opacity: .5}}
-                
-                >
-                Download CV
-                </Button>
-              </Link>
+              } 
+              <ButtonPrimary
+              href={'https://drive.google.com/file/d/1yVkxlNI5xSJLFPRY5CW10KOLibACLlEV/view?usp=sharing'}
+              rounded={'full'}
+              bg={'purple'}
+              color={'white'}
+              fontWeight={'bold'}
+              boxShadow='rgb(99 51 255 / 19%) 5px 5px 15px 5px'
+              _hover={{
+                opacity: .8,
+                transform: 'translateY(-5px)'
+              }}
+              _active={{opacity: .5}}
+              > 
+              Download CV
+              </ButtonPrimary>
+              
+           
+ 
              
         </Stack>  
            

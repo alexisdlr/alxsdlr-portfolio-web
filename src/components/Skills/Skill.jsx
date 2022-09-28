@@ -25,7 +25,7 @@ const Skill = () => {
           </Heading>
           <Box
           p={8} 
-          border={'1px solid #fff'} 
+          border={'1px solid GrayText'} 
           rounded={8} _hover={{
             opacity: .8, 
             border: '1px solid yellow', 

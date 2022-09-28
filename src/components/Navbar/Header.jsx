@@ -11,7 +11,8 @@ const Header = ({children}) => {
     top={4} 
     wrap="wrap"
     pos="fixed" 
-    zIndex={99}  >
+    zIndex={99} 
+    >
       {children}
     </Box>
   )

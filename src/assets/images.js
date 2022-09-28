@@ -1,3 +1,4 @@
+//skills
 import html from './skillset/HTML5.png'
 import css from './skillset/CSS.png'
 import js from './skillset/js.png'
@@ -11,6 +12,12 @@ import mysql from './skillset/mysql.png'
 import git from './skillset/git.png'
 import chakra from './skillset/chakra.png'
 
+//projects
+import gamex from './Projects/GameX.jpg'
+import browser from './Projects/images.jpg'
+import book from './Projects/Bookmark.jpg'
+import weather from './Projects/weather.jpg'
+import space from './Projects/space.jpg'
 
 export const images = {
   html,
@@ -24,5 +31,10 @@ export const images = {
   mysql,
   bootstrap,
   git,
-  chakra
+  chakra,
+  gamex,
+  browser,
+  book,
+  weather,
+  space
 }

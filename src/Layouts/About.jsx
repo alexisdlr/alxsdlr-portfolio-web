@@ -4,7 +4,7 @@ import AboutInfo from "../components/About/AboutInfo"
 const About = ( ) => {
   return(
     <motion.div
-    initial={{opacity: 0}}
+      initial={{opacity: 0}}
       whileInView={{opacity:1}}
       transition={{duration: 1}}
       viewport={{once: true}}
@@ -15,7 +15,7 @@ const About = ( ) => {
         color={'yellow'}
         fontSize={{base: '4xl', md: '8xl'}}
         >
-        About!
+        About me!
       </Heading>
       <AboutInfo />
      

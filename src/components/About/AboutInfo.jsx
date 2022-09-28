@@ -36,12 +36,9 @@ const AboutInfo = () => {
         />
         <Flex direction={'column'} px={{base: 0, md: 16}}>
           <Box>
-            <Text fontSize={{base: '1rem', md: 'xl'}} color={'gray.200'}  >
+            <Text as={'p'} fontSize={{base: '1rem', md: 'xl'}} color={'gray.200'}  >
               Hi! I am Alexis De León a very hardworking Frontend Developer from MX who wants to collaborate in amazing things. <br />
-
-              Why I code? I love coding because since I was a child, everything related to technology has attracted me a lot. That's why I grew up with this attraction and now I find myself learning everything I can about web development. <br />
-
-              My goal is to become an excellent web developer, work from this and be able to make my life easier
+              As a self-taught developer for almost 2 years, I love learning new things, my main area of ​​learning is Javascript, I enjoy building sites with technologies like ReactJs, I'm constantly learning, and also improving things I already know, I have experience in Front-end and in Backend
             </Text>
           </Box>
         </Flex>
