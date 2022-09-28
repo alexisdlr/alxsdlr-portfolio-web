@@ -1,6 +1,5 @@
 import html from './HTML5.png'
 import css from './CSS.png'
-import js from './javaScript.png'
 import node from './nodejs.png'
 import sass from './sass.png'
 import tailwind from './TailwindCSS.png'
@@ -16,7 +15,6 @@ export const images = {
   html,
   css,
   node, 
-  js,
   sass,
   tailwind,
   express,
