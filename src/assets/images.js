@@ -1,6 +1,6 @@
 import html from './skillset/HTML5.png'
 import css from './skillset/CSS.png'
-import js from './skillset/javascript.png'
+import js from './skillset/javaScript.png'
 import node from './skillset/nodejs.png'
 import sass from './skillset/sass.png'
 import tailwind from './skillset/TailwindCSS.png'
