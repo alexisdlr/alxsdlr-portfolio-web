@@ -21,6 +21,7 @@ const Project = () => {
         justify={'center'}
         align={'center'}
         gap={5}
+        p={{base: 8, md: 0}}
         _hover={{opacity: .8, transition: '300ms'}}
         
         >
