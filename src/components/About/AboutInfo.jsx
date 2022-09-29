@@ -12,9 +12,7 @@ const AboutInfo = () => {
   return(
     <Container 
     rounded={8} 
-    bgColor={'rgba(88,0,255,.5)'} 
-    backdropFilter='auto' 
-    backdropBlur='8px'
+    bgColor={'rgba(88, 0, 255, .8)'} 
     py={8} 
     px={16} 
     textAlign={{base: 'center', md: 'left'}} 
@@ -31,14 +29,18 @@ const AboutInfo = () => {
           maxW={{base: '200px', md: '400px'}}
           rounded={'8'}
           objectFit={'cover'}
-          boxShadow={'2px 2px 10px #FFC600'}
+          boxShadow={'2px 2px 10px yellow'}
          
         />
         <Flex direction={'column'} px={{base: 0, md: 16}}>
           <Box>
-            <Text as={'p'} fontSize={{base: '1rem', md: 'xl'}} color={'gray.200'}  >
-              Hi! I am Alexis De León a very hardworking Frontend Developer from MX who wants to collaborate in amazing things. <br />
-              As a self-taught developer for almost 2 years, I love learning new things, my main area of ​​learning is Javascript, I enjoy building sites with technologies like ReactJs, I'm constantly learning, and also improving things I already know, I have experience in Front-end and in Backend
+            <Text 
+            as={'p'} 
+            fontSize={{base: '1rem', md: 'xl'}} 
+            color={'white'} 
+            fontWeight={'normal'} >
+              Hi! I am <Text as={'span'} fontWeight={'bold'} color={'yellow'}>Alexis De León</Text> a very hardworking <Text as={'span'} fontWeight={'bold'} color={'yellow'}>Web Developer</Text> from MX who wants to collaborate in amazing things. <br />
+              As a self-taught developer for almost 2 years, I love learning new things, my main area of ​​learning is <Text as={'span'} fontWeight={'bold'} color={'yellow'}>Javascript</Text>, I enjoy building sites with technologies like <Text as={'span'} fontWeight={'bold'} color={'blue.400'} >ReactJs</Text>. I'm constantly learning, and also improving things I already know, I have experience in <Text as={'span'} fontWeight={'bold'} color={'yellow'}>Front-end and in Back-end</Text> 
             </Text>
           </Box>
         </Flex>
