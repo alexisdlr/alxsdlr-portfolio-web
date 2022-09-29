@@ -1,14 +1,16 @@
 import React, {Suspense, lazy} from 'react'
 import { ChakraProvider, Flex } from '@chakra-ui/react'
 import { Oval } from 'react-loader-spinner'
+import theme from '../theme/theme'
 
 const Home = lazy(() => import('./Layouts/Home'))
 const Projects = lazy(() => import('./Layouts/Projects'))
 const Skills = lazy(() => import('./Layouts/Skills'))
 const About = lazy(() => import('./Layouts/About'))
+const Contact = lazy(() => import('./Layouts/Contact'))
+const Footer = lazy(() => import('./Layouts/Footer'))
 
-import theme from '../theme/theme'
-import Contact from './Layouts/Contact'
+
 function App() {
 
   return (
@@ -28,7 +30,7 @@ function App() {
                 <Skills />
                 <Projects />
                 <Contact />
-
+                <Footer />
 
               </Suspense>
               
