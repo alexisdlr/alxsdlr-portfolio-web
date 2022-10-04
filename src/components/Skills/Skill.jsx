@@ -19,6 +19,7 @@ const Skill = () => {
         gap={5} 
         align={'center'} 
         p={6} 
+        cursor={'pointer'}
         _hover={{color: 'yellow',transition: '300ms'}} >
           <Heading color={'gray.100'} fontSize={{base: 'xl', md: '2xl'}} textShadow={'1px 1px 6px #5800FF'} >
             {item.alt}

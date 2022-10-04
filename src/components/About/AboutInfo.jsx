@@ -28,7 +28,8 @@ const AboutInfo = () => {
           maxW={{base: '200px', md: '400px'}}
           rounded={'8'}
           objectFit={'cover'}
-          boxShadow={'2px 2px 10px yellow'}
+          boxShadow={'0px 15px 10px -15px #5800FF'}
+
          
         />
         <Flex direction={'column'} px={{base: 0, md: 16}}>
