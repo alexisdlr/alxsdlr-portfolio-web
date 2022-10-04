@@ -20,7 +20,9 @@ const Contact = () => {
         gap={4}
         as={'section'}
         >
-        <Box as={'div'} >
+        <Box as={'div'}
+          textAlign={{base: 'center', md:'initial'}}
+          >
           <Heading 
             px={{base: 8, md :0}}
             color={'yellow'}

@@ -27,6 +27,7 @@ const About = ( ) => {
           color={'gray.300'} 
           fontSize={{base: '2xl', md: '4xl'}}
           fontWeight={'normal'}
+          textAlign={{base: 'center', md: 'initial'}}
           as={'span'}
           >
             Who I am

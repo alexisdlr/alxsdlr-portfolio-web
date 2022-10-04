@@ -12,7 +12,6 @@ const AboutInfo = () => {
   return(
     <Container 
     rounded={8} 
-    bgColor={'rgba(88, 0, 255, .8)'} 
     py={8} 
     px={16} 
     textAlign={{base: 'center', md: 'left'}} 
@@ -33,7 +32,11 @@ const AboutInfo = () => {
          
         />
         <Flex direction={'column'} px={{base: 0, md: 16}}>
-          <Box>
+          <Box
+           p={8}
+           bgColor={'rgba(88, 0, 255, .8)'} 
+           borderRadius={'8px'}
+          >
             <Text 
             as={'p'} 
             fontSize={{base: '1rem', md: 'xl'}} 
