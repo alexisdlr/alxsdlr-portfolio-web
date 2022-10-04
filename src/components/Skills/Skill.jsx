@@ -1,4 +1,4 @@
-import { Stack, Image, Flex, Heading, Box } from "@chakra-ui/react";
+import { Stack, Image, Flex, Heading, Box, Text } from "@chakra-ui/react";
 import { skills } from "./listSkills";
 
 
@@ -25,24 +25,48 @@ const Skill = () => {
             {item.alt}
           </Heading>
           <Box
-          p={8} 
+          position={'relative'}
+          p={8}
+          overflow={'hidden'}
           border={'1px solid GrayText'} 
           rounded={8} _hover={{
-            opacity: .8, 
             border: '1px solid yellow', 
             transition: '300ms',
-            boxShadow: '2px 5px 8px yellow',
-            transform: 'translateY(-3px)'
+            boxShadow: '0px 15px 15px -15px yellow'
             }} 
 >
-            <Image
-            
-            maxW={16} 
+            <Image 
+            maxW={32} 
             rounded='full'
             src={item.image}
             alt={item.alt}
             zIndex={'88'}
+            transition={'300ms ease-in-out'}
             />
+            <Text
+            w={'100%'} 
+            h={'100%'}
+            mx={'auto'}
+            bg={'black'}
+            transform={'translateY(10px)'}
+            display={'flex'}
+            justifyContent={'center'}
+            alignItems={'center'}
+            position={'absolute'}
+            top={'0'}
+            left={'0'}
+            p={2}
+            fontSize={'12px'}
+            textAlign={'center'}
+            color={'yellow'}
+            fontWeight={'400'}
+            letterSpacing={'2px'}
+            opacity={'0'}
+            transition={'all 0.3s ease'}
+            _hover={{opacity: 1, maxHeight: '100%', transform: 'translateY(0px)'}}
+            >
+              {item.desc}
+            </Text>
           </Box>
          
         </Flex>
