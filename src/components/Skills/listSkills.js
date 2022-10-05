@@ -5,7 +5,7 @@ export const skills = [
     id: 1, alt: 'HTML5', image: images.html, desc: 'Markup Language to create web documents.'
   },
   {
-    id: 2, alt: 'CSS3', image: images.css, desc: 'Stylesheets language to web design'
+    id: 2, alt: 'CSS3', image: images.css, desc: 'Stylesheets language to web design.'
   },
   {
     id: 3, alt: 'Javascript', image: images.js, desc: 'Programming Language to make interactive webs.'
@@ -14,7 +14,7 @@ export const skills = [
     id: 4, alt: 'NodeJs', image: images.node, desc: 'Asynchronous event-driven JavaScript runtime environment designed for building scalable network applications.'
   },
   {
-    id: 5, alt: 'Sass', image: images.sass, desc: 'CSS preprocessor that allows to add features of a programming language'
+    id: 5, alt: 'Sass', image: images.sass, desc: 'CSS preprocessor that allows to add features of a programming language.'
   },
   {
     id: 6, alt: 'Tailwind CSS', image: images.tailwind, desc: 'An open source CSS framework for web page design.'
@@ -32,9 +32,9 @@ export const skills = [
     id: 10, alt: 'Mysql', image: images.mysql, desc: 'Relational database management system based on Structured Query Language (SQL).'
   },
   {
-    id: 11, alt: 'Git', image: images.git, desc: 'Version control software'
+    id: 11, alt: 'Git', image: images.git, desc: 'Version control software.'
   },
   {
-    id: 12, alt: 'Chakra-Ui', image: images.chakra, desc: 'ReactJs library for creating UI'
+    id: 12, alt: 'Chakra-Ui', image: images.chakra, desc: 'ReactJs library for creating UI.'
   }
 ]
