@@ -35,7 +35,6 @@ const AboutInfo = () => {
         <Flex direction={'column'} px={{base: 0, md: 16}}>
           <Box
            p={8}
-           bgColor={'rgba(88, 0, 255, .8)'} 
            borderRadius={'8px'}
           >
             <Text 
