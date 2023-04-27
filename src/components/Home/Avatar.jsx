@@ -1,10 +1,10 @@
 import { Box, Image } from "@chakra-ui/react"
-import avatar from '../../assets/Avatar.png'
+import Img from '../../assets/me.png'
 const Avatar = () => {
   return(
     <Box>
       <Image
-        src={avatar}
+        src={Img}
         alt={'avatar img'}
         rounded='full'
         w='64'

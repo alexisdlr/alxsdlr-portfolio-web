@@ -3,10 +3,10 @@ import { images } from "../../assets/images";
 const listProjects = [
   {
     id: 1 , 
-    title: 'GameX' , 
-    src: images.gamex, 
-    url: 'https://game-x-beta.vercel.app/',
-    code: 'https://github.com/alexisdlr/GameX'
+    title: 'Netflix Clone' , 
+    src: images.netflix, 
+    url: 'https://netflix-clone-nextjs-dun.vercel.app/',
+    code: 'https://github.com/alexisdlr/netflix-clone-nextjs'
   },
   {
     id: 2 , 

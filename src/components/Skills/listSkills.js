@@ -2,10 +2,10 @@ import { images } from "../../assets/images"
 
 export const skills = [
   {
-    id: 1, alt: 'HTML5', image: images.html, desc: 'Markup Language to create web documents.'
+    id: 1, alt: 'HTML5', image: images.html, desc: 'Markup Language to create web documents.', cat: 'Frontend'
   },
   {
-    id: 2, alt: 'CSS3', image: images.css, desc: 'Stylesheets language to web design.'
+    id: 2, alt: 'CSS3', image: images.css, desc: 'Stylesheets language to web design.', cat: 'Frontend'
   },
   {
     id: 3, alt: 'Javascript', image: images.js, desc: 'Programming Language to make interactive webs.'

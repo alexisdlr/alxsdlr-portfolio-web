@@ -4,11 +4,11 @@ const Logo = ({open}) => {
   return(
     <Box>
       <Image 
-      boxSize={{base: 12, md: 20}} 
+      boxSize={{base: 12, md: 16}} 
       position={open ? 'absolute' : 'initial'}
       borderRadius='full' 
       objectFit={'cover'}
-      boxShadow={'0px 6px 8px #5800FF'} 
+      boxShadow={'-1px 2px 1px #5800FF'} 
       src={logo} 
       top={6}
       alt='logo' />

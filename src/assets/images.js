@@ -13,7 +13,7 @@ import git from './skillset/git.png'
 import chakra from './skillset/chakra.png'
 
 //projects
-import gamex from './Projects/GameX.jpg'
+import netflix from './Projects/netflix.png'
 import browser from './Projects/images.jpg'
 import book from './Projects/Bookmark.jpg'
 import weather from './Projects/weather.jpg'
@@ -32,7 +32,7 @@ export const images = {
   bootstrap,
   git,
   chakra,
-  gamex,
+  netflix,
   browser,
   book,
   weather,
