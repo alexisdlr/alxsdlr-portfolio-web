@@ -11,6 +11,9 @@ import bootstrap from './skillset/bootstrap.png'
 import mysql from './skillset/mysql.png'
 import git from './skillset/git.png'
 import chakra from './skillset/chakra.png'
+import mongo from './skillset/mongo.png'
+import github from './skillset/github.png'
+import vercel from './skillset/vercel.png'
 
 //projects
 import netflix from './Projects/netflix.png'
@@ -20,6 +23,9 @@ import weather from './Projects/weather.jpg'
 import space from './Projects/space.jpg'
 
 export const images = {
+  mongo,
+  vercel,
+  github,
   html,
   css,
   node, 

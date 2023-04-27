@@ -34,6 +34,7 @@ function ItemSkill({item}) {
           zIndex={"88"}
           transition={"300ms ease-in-out"}
         />
+
       </Box>
     </Flex>
   );

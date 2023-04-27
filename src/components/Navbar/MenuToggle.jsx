@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react";
 
 const CloseIcon = () => (
   <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
@@ -24,14 +24,15 @@ const MenuIcon = () => (
 
 const MenuToggle = ({ toggle, isOpen }) => {
   return (
-    <Box 
-    display={{ base: "block", md: "none" }}
-    position={isOpen ? 'absolute' : 'initial'}
-    right={12}
-    top={8}
-    onClick={toggle}>
+    <Box
+      display={{ base: "block", md: "none" }}
+      position={isOpen ? "absolute" : "initial"}
+      right={12}
+      top={8}
+      onClick={toggle}
+    >
       {isOpen ? <CloseIcon /> : <MenuIcon />}
     </Box>
-  )
-}
-export default MenuToggle
+  );
+};
+export default MenuToggle;
