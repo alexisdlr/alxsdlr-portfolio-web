@@ -3,7 +3,7 @@ import { Stack } from "@chakra-ui/react"
 const HeroContainer = ({children}) => {
   return(
     <Stack 
-    minH={{base: '80vh', md: '100vh'}} 
+    minH={{base: '100vh', md: '100vh'}} 
     direction={{ base: 'column-reverse', md: 'row' }} 
     alignItems={'center'} 
     justifyContent={'center'}
