@@ -46,4 +46,13 @@ export const skills = [
   {
     id: 15, alt: 'Github', image: images.github, desc: 'Database.', cat: 'Tools'
   },
+  {
+    id: 16, alt: 'Vite', image: images.vite, desc: 'Database.', cat: 'Tools'
+  },
+  {
+    id: 17, alt: 'PostgreSql', image: images.postgre, desc: 'Database.', cat: 'Backend'
+  },
+  {
+    id: 18, alt: 'NextJs', image: images.next, desc: 'Database.', cat: 'Frontend'
+  },
 ]

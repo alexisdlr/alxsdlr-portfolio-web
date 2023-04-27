@@ -6,7 +6,7 @@ const AboutInfo = () => {
     <Container
       rounded={8}
       py={8}
-      px={16}
+      px={{ base: 2, md: 16 }}
       textAlign={{ base: "center", md: "left" }}
       maxW={"full"}
     >
@@ -15,19 +15,29 @@ const AboutInfo = () => {
         justify={"center"}
         direction={{ base: "column", md: "row" }}
         gap={{ base: 8, md: 4 }}
-        
       >
-        <Box display={{base: 'none', md:'block'}} w={'350px'} bg={'purple'} height={'350px'} position={'absolute'} left={150} borderRadius={8} />
-        <Image
-          alt="alexis de leon rodriguez"
-          src={alxs}
-          transform="rotate(8deg)"
-          maxW={{ base: "200px", md: "350px" }}
-          rounded={"8"}
-          objectFit={"cover"}
-        />
+        <Box position={"relative"}>
+          <Box
+            w={{ base: "200px", md: "350px" }}
+            bg={"purple"}
+            height={{ base: "200px", md: "350px" }}
+            position={"absolute"}
+            left={0}
+            top={0}
+            borderRadius={8}
+          />
+          <Image
+            alt="alexis de leon rodriguez"
+            src={alxs}
+            transform="rotate(8deg)"
+            maxW={{ base: "200px", md: "350px" }}
+            rounded={"8"}
+            boxShadow={'10px 1px 155px #5800FF'}
+            objectFit={"cover"}
+          />
+        </Box>
         <Flex direction={"column"} px={{ base: 0, md: 16 }}>
-          <Box p={8} borderRadius={"8px"}>
+          <Box p={{ base: 0, md: 4 }} borderRadius={"8px"}>
             <Text
               as={"p"}
               fontSize={{ base: "1rem", md: "xl" }}

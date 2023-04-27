@@ -32,7 +32,7 @@ const Footer = () => {
             </Text>
           </Heading>
       </Box>
-      <SocialLinks />
+      <SocialLinks size={7} />
       <Box mb={{base: 4, md: 0}}>
         Made with ❤ by Alexis De Leon © 2022
       </Box>

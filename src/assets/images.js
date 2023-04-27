@@ -14,6 +14,9 @@ import chakra from './skillset/chakra.png'
 import mongo from './skillset/mongo.png'
 import github from './skillset/github.png'
 import vercel from './skillset/vercel.png'
+import vite from './skillset/vite.png'
+import next from './skillset/next.png'
+import postgre from './skillset/postgre.png'
 
 //projects
 import netflix from './Projects/netflix.png'
@@ -23,6 +26,9 @@ import weather from './Projects/weather.jpg'
 import space from './Projects/space.jpg'
 
 export const images = {
+  postgre,
+  next,
+  vite,
   mongo,
   vercel,
   github,

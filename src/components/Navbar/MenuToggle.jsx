@@ -27,8 +27,9 @@ const MenuToggle = ({ toggle, isOpen }) => {
     <Box
       display={{ base: "block", md: "none" }}
       position={isOpen ? "absolute" : "initial"}
+      cursor={'pointer'}
       right={12}
-      top={8}
+      top={5}
       onClick={toggle}
     >
       {isOpen ? <CloseIcon /> : <MenuIcon />}

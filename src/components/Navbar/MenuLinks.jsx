@@ -2,10 +2,10 @@ import { Box, Stack } from "@chakra-ui/react";
 import { ButtonPrimary } from "../Button";
 import MenuItem from "./MenuItem";
 
-const MenuLinks = ({ open }) => {
-  const Datanav = [
+const MenuLinks = ({ open, toggle }) => {
+  const dataNav = [
     { id: 1, text: "Home", link: "#home" },
-    { id: 2, text: "Sklls", link: "#skills" },
+    { id: 2, text: "Skills", link: "#skills" },
     { id: 3, text: "Projects", link: "#projects" },
     { id: 4, text: "Contact Me", link: "#contact" },
   ];
@@ -16,15 +16,17 @@ const MenuLinks = ({ open }) => {
       flexBasis={{ base: "100%", md: "auto" }}
     >
       <Stack
-        spacing={8}
+        spacing={10}
+        h={{base: '100vh', md: 'auto'}}
         align="center"
         justify={{ base: "center", md: "space-between", lg: "flex-end" }}
         direction={{ base: "column", md: "row" }}
         pt={{ base: 8, md: 0, lg: 0 }}
       >
-        {Datanav.map((item) => (
+        {dataNav.map((item) => (
           <MenuItem
             key={item.id}
+            onClick={toggle}
             _hover={{ color: "purple", transition: "300ms" }}
             to={item.link}
           >

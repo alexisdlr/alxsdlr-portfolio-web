@@ -1,9 +1,9 @@
 import { Box, Icon } from "@chakra-ui/react"
 
-export const IconLink = ({icon, href}) => {
+export const IconLink = ({icon, href, size}) => {
   return(
     <Box as="a" href={href} target={'_blank'}>
-        <Icon as={icon} h={7} w={7} _hover={{color:'purple', transition: '300ms ease-in-out'}} />
+        <Icon as={icon} h={size} w={size} _hover={{color:'purple', transition: '300ms ease-in-out'}} />
     </Box>
   )
 }

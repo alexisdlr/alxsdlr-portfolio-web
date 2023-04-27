@@ -5,14 +5,15 @@ import { useCallback, useState } from "react";
 
 const Skill = () => {
   const [cat, setCat] = useState("Frontend");
-  const [selected, SetSelected] = useState(false);
+  const [selected, setSelected] = useState('Frontend');
 
   
   const handleClick = useCallback(
     (e) => {
       setCat(e.target.value);
+      setSelected(e.target.value)
     },
-    [setCat]
+    [setCat, setSelected]
   );
 
   return (
@@ -32,7 +33,8 @@ const Skill = () => {
               textColor={"lightgray"}
               mt={6}
               borderRadius={0}
-              borderLeft={{base: 0 , md: `2px solid ${selected ? 'purple' : 'lightgray'}`}}
+              borderBottom={{md: 0 , base: `2px solid ${selected === 'Frontend' ? 'purple' : 'lightgray'}`}}
+              borderLeft={{base: 0 , md: `2px solid ${selected === 'Frontend' ? 'purple' : 'lightgray'}`}}
               onClick={handleClick}
               _hover={{
                 opacity: 0.7,
@@ -49,7 +51,8 @@ const Skill = () => {
               textColor={"lightgray"}
               mt={6}
               borderRadius={0}
-              borderLeft={{base: 0 , md: `2px solid ${selected ? 'purple' : 'lightgray'}`}}
+              borderBottom={{md: 0 , base: `2px solid ${selected === 'Backend' ? 'purple' : 'lightgray'}`}}
+              borderLeft={{base: 0 , md: `2px solid ${selected === 'Backend' ? 'purple' : 'lightgray'}`}}
               onClick={handleClick}
               _hover={{
                 opacity: 0.7,
@@ -64,7 +67,8 @@ const Skill = () => {
               w={"120px"}
               borderRadius={0}
               textColor={"lightgray"}
-              borderLeft={{base: 0 , md: `2px solid ${selected ? 'purple' : 'lightgray'}`}}
+              borderBottom={{md: 0 , base: `2px solid ${selected === 'Tools' ? 'purple' : 'lightgray'}`}}
+              borderLeft={{base: 0 , md: `2px solid ${selected === 'Tools' ? 'purple' : 'lightgray'}`}}
               backgroundColor={"transparent"}
               mt={6}
               onClick={handleClick}
