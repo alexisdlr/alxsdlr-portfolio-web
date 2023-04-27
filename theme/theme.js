@@ -17,6 +17,9 @@ const theme = extendTheme({
       body: {
         bg: '#000114',
         color: '#fff',
+        '@media (max-width: 500px)': {
+          display: 'flex'
+        },
         overflowX: 'hidden',
         '&::-webkit-scrollbar':  {
           width: '12px',
