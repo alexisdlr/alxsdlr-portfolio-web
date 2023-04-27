@@ -12,22 +12,22 @@ const About = () => {
         my={{ base: "24", md: "32" }}
       >
         <Heading
-          my={8}
           color={"yellow"}
           fontSize={{ base: "3xl", md: "8xl" }}
           lineHeight={"10"}
         >
-          About me! <br />
-          <Text
-            color={"gray.300"}
-            fontSize={{ base: "2xl", md: "4xl" }}
-            fontWeight={"normal"}
-            textAlign={{ base: "center", md: "initial" }}
-            as={"span"}
-          >
-            Who I am
-          </Text>
+          About me!
         </Heading>
+        <Text
+          color={"gray.300"}
+          my={{base: 0, md: 8}}
+          fontSize={{ base: "2xl", md: "4xl" }}
+          fontWeight={"normal"}
+          textAlign={{ base: "center", md: "initial" }}
+          as={"span"}
+        >
+          Who I am
+        </Text>
         <AboutInfo />
       </Flex>
     </motion.div>

@@ -86,7 +86,7 @@ const Skill = () => {
           {skills
             .filter((item) => item.cat === cat)
             .map((item) => (
-              <ItemSkill item={item} key={item.id} />
+              <ItemSkill item={item} key={item.id} index={item.id} />
             ))}
         </Flex>
     </Stack>

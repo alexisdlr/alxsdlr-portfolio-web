@@ -16,7 +16,7 @@ function App() {
       <div className="App">
         <Suspense
           fallback={
-            <Flex h={"container.md"} justify={"center"} alignItems={"center"}>
+            <Flex h={"100vh"} justify={"center"} alignItems={"center"}>
               <Oval color="#5800FF" secondaryColor="#FFC600" />
             </Flex>
           }
