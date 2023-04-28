@@ -10,6 +10,8 @@ const About = () => {
         maxW={1350}
         mx={"auto"}
         my={{ base: "24", md: "30" }}
+        minH={{base: '85vh', md: '100vh'}} 
+
       >
         <Heading
           color={"yellow"}

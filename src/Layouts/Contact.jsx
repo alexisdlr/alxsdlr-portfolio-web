@@ -8,12 +8,13 @@ const Contact = () => {
         id={"contact"}
         direction={{ base: "column", md: "row" }}
         align={"center"}
+        minH={{base: '85vh', md: '100vh'}} 
         justify={"center"}
         maxW={1350}
         mx={"auto"}
-        my={{ base: "24", md: "32" }}
         gap={4}
         as={"section"}
+
       >
         <Box as={"div"} textAlign={{ base: "center", md: "initial" }}>
           <Heading

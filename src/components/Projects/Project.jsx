@@ -27,8 +27,8 @@ const Project = () => {
             direction={"column"}
             justify={"center"}
             align={"center"}
-            gap={5}
-            p={{ base: 8, md: 0 }}
+            gap={10}
+            p={{ base: 8, md: 2 }}
             _hover={{ opacity: 0.8, transition: "300ms" }}
           >
             <Heading fontSize={{ base: "1rem", md: "xl" }}>{title}</Heading>

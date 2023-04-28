@@ -13,7 +13,7 @@ const Projects = () => {
         <Flex
           id="projects"
           as={"section"}
-          my={{ base: "24", md: "36" }}
+          minH={{base: '85vh', md: '100vh'}} 
           justify={"center"}
           align={{ base: "center", md: "flex-start" }}
           direction={"column"}
