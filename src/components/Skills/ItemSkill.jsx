@@ -1,26 +1,15 @@
 import { Flex, Heading, Box, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-
+import { variants } from "../../constants/variants";
 function ItemSkill({ item, index }) {
-  const variants = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: ({ delay }) => ({
-      opacity: 1,
-      transition: {
-        delay,
-        duration: 0.3,
-      },
-    }),
-  };
+  
   return (
     <motion.div
       initial={"hidden"}
       whileInView={"visible"}
       custom={{ delay: (index + 1) * 0.05 }}
       variants={variants}
-      viewport={{ once: true }}
+      viewport={{ once: false }}
     >
       <Flex
         key={item.id}

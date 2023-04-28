@@ -2,12 +2,14 @@ import { Box, Stack } from "@chakra-ui/react";
 import { ButtonPrimary } from "../Button";
 import MenuItem from "./MenuItem";
 
-const MenuLinks = ({ open, toggle }) => {
+const MenuLinks = ({ open, toggle, scrollToSection }) => {
+
+ 
   const dataNav = [
-    { id: 1, text: "Home", link: "#home" },
-    { id: 2, text: "Skills", link: "#skills" },
-    { id: 3, text: "Projects", link: "#projects" },
-    { id: 4, text: "Contact Me", link: "#contact" },
+    { id: 1, text: "Home", link: "home" },
+    { id: 2, text: "Skills", link: "skills" },
+    { id: 3, text: "Projects", link: "projects" },
+    { id: 4, text: "Contact Me", link: "contact" },
   ];
   return (
     <Box
@@ -23,9 +25,13 @@ const MenuLinks = ({ open, toggle }) => {
         direction={{ base: "column", md: "row" }}
         pt={{ base: 8, md: 0, lg: 0 }}
       >
+       
         {dataNav.map((item) => (
           <MenuItem
             key={item.id}
+            scrollToSection={
+              scrollToSection
+            }
             onClick={toggle}
             _hover={{ color: "purple", transition: "300ms" }}
             to={item.link}
