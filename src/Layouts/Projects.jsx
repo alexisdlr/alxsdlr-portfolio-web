@@ -1,6 +1,6 @@
 import { Flex, Heading, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import Project from "../components/Projects/Project";
+import ListProjects from "../components/Projects/ListProject";
 const Projects = () => {
   return (
     <>
@@ -13,6 +13,7 @@ const Projects = () => {
         <Flex
           id="projects"
           as={"section"}
+          my={{ base: "24", md: "36" }}
           minH={{base: '85vh', md: '100vh'}} 
           justify={"center"}
           align={{ base: "center", md: "flex-start" }}
@@ -33,7 +34,7 @@ const Projects = () => {
             A little section of my recents web projects
           </Text>
 
-          <Project />
+          <ListProjects />
         </Flex>
       </motion.div>
     </>
