@@ -14,7 +14,7 @@ const AboutInfo = () => {
         align={"center"}
         justify={"center"}
         direction={{ base: "column", md: "row" }}
-        gap={{ base: 8, md: 4 }}
+        gap={{ base: 8, md: 10 }}
       >
         <Box position={"relative"}>
           <Box
@@ -36,8 +36,7 @@ const AboutInfo = () => {
             objectFit={"cover"}
           />
         </Box>
-        <Flex direction={"column"} px={{ base: 0, md: 16 }}>
-          <Box p={{ base: 0, md: 4 }} borderRadius={"8px"}>
+          <Box p={{ base: 3, md: 10 }} borderRadius={"8px"}>
             <Text
               as={"p"}
               fontSize={{ base: "1rem", md: "xl" }}
@@ -70,7 +69,6 @@ const AboutInfo = () => {
             </Text>
           </Box>
         </Flex>
-      </Flex>
     </Container>
   );
 };

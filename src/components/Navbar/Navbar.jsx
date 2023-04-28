@@ -15,9 +15,9 @@ function Navbar() {
   const handleScroll = () => setScrollPosition(window.scrollY);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (sectionId) => {
@@ -29,7 +29,7 @@ function Navbar() {
       window.scrollTo({
         top: sectionPosition,
         left: 0,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
@@ -39,7 +39,12 @@ function Navbar() {
       <Header>
         <NavContainer>
           <Logo open={open} />
-          <MenuLinks open={open} toggle={toggle}  scrollToSection={scrollToSection} />
+          <MenuLinks
+            open={open}
+            toggle={toggle}
+            scrollToSection={scrollToSection}
+          />
+
           <MenuToggle toggle={toggle} isOpen={open} />
         </NavContainer>
       </Header>

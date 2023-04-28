@@ -1,5 +1,4 @@
 import { Box } from "@chakra-ui/react";
-
 const CloseIcon = () => (
   <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
     <title>Close</title>
@@ -27,12 +26,16 @@ const MenuToggle = ({ toggle, isOpen }) => {
     <Box
       display={{ base: "block", md: "none" }}
       position={isOpen ? "absolute" : "initial"}
-      cursor={'pointer'}
+      cursor={"pointer"}
       right={12}
       top={5}
       onClick={toggle}
     >
-      {isOpen ? <CloseIcon /> : <MenuIcon />}
+      {isOpen ? (
+          <CloseIcon />
+      ) : (
+          <MenuIcon />
+      )}
     </Box>
   );
 };

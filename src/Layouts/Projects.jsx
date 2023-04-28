@@ -25,7 +25,7 @@ const Projects = () => {
             Projects
           </Heading>
           <Text
-            mb={16}
+            mb={{base: 2, md: 16 }}
             px={{ base: 8, md: 0 }}
             color="gray.100"
             textAlign={{ base: "center", md: "left" }}

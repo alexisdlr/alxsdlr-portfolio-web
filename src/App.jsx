@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from "react";
-import { ChakraProvider, Flex } from "@chakra-ui/react";
-import { Oval } from "react-loader-spinner";
+import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../theme/theme";
+import Loader from "./components/Loader";
 
 const Home = lazy(() => import("./Layouts/Home"));
 const Projects = lazy(() => import("./Layouts/Projects"));
@@ -16,9 +16,7 @@ function App() {
       <div className="App">
         <Suspense
           fallback={
-            <Flex h={"100vh"} minW={{base: '50vh', md: '100%'}} justifyContent={"center"} alignItems={"center"}>
-              <Oval color="#5800FF" secondaryColor="#FFC600" />
-            </Flex>
+            <Loader />
           }
         >
           <Home />

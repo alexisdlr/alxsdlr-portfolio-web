@@ -13,6 +13,7 @@ const Skills = () => {
           justify={"center"}
           align={{ base: "center", md: "flex-start" }}
           direction={"column"}
+          mb={{ base: "24", md: "36" }}
           minH={{base: '85vh', md: '100vh'}} 
           id="skills"
           maxW={1350}

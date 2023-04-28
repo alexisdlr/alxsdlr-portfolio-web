@@ -9,7 +9,7 @@ const About = () => {
         align={{ base: "center", md: "flex-start" }}
         maxW={1350}
         mx={"auto"}
-        my={{ base: "24", md: "30" }}
+        my={{ base: "10", md: "30" }}
         minH={{base: '85vh', md: '100vh'}} 
 
       >
