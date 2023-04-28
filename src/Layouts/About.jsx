@@ -1,16 +1,15 @@
 import { Flex, Heading, Text } from "@chakra-ui/react";
-import { motion } from "framer-motion";
 import AboutInfo from "../components/About/AboutInfo";
 const About = () => {
   return (
-    <motion.div whileInView={{ opacity: [0, 1] }} viewport={{once: true}}>
+   
       <Flex
         direction={"column"}
         align={{ base: "center", md: "flex-start" }}
         maxW={1350}
         mx={"auto"}
         my={{ base: "10", md: "30" }}
-        minH={{base: '85vh', md: '100vh'}} 
+        minH={{base: '90vh', md: '100vh'}} 
 
       >
         <Heading
@@ -32,7 +31,6 @@ const About = () => {
         </Text>
         <AboutInfo />
       </Flex>
-    </motion.div>
   );
 };
 export default About;

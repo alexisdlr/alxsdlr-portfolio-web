@@ -31,10 +31,11 @@ const Skill = () => {
               w={"120px"}
               backgroundColor={"transparent"}
               textColor={"lightgray"}
-              mt={6}
+              mt={{base: 0, md: 6}}
+              minH={{base: 'auto', md: '60px'}}
               borderRadius={0}
-              borderBottom={{md: 0 , base: `2px solid ${selected === 'Frontend' ? 'purple' : 'lightgray'}`}}
-              borderLeft={{base: 0 , md: `2px solid ${selected === 'Frontend' ? 'purple' : 'lightgray'}`}}
+              borderBottom={{md: 0 , base: `2px solid ${selected === 'Frontend' ? '#5800FF' : 'lightgray'}`}}
+              borderLeft={{base: 0 , md: `2px solid ${selected === 'Frontend' ? '#5800FF' : 'lightgray'}`}}
               onClick={handleClick}
               _hover={{
                 opacity: 0.7,
@@ -49,10 +50,10 @@ const Skill = () => {
               w={"120px"}
               backgroundColor={"transparent"}
               textColor={"lightgray"}
-              mt={6}
+              minH={{base: 'auto', md: '60px'}}
               borderRadius={0}
-              borderBottom={{md: 0 , base: `2px solid ${selected === 'Backend' ? 'purple' : 'lightgray'}`}}
-              borderLeft={{base: 0 , md: `2px solid ${selected === 'Backend' ? 'purple' : 'lightgray'}`}}
+              borderBottom={{md: 0 , base: `2px solid ${selected === 'Backend' ? '#5800FF' : 'lightgray'}`}}
+              borderLeft={{base: 0 , md: `2px solid ${selected === 'Backend' ? '#5800FF' : 'lightgray'}`}}
               onClick={handleClick}
               _hover={{
                 opacity: 0.7,
@@ -67,10 +68,10 @@ const Skill = () => {
               w={"120px"}
               borderRadius={0}
               textColor={"lightgray"}
-              borderBottom={{md: 0 , base: `2px solid ${selected === 'Tools' ? 'purple' : 'lightgray'}`}}
-              borderLeft={{base: 0 , md: `2px solid ${selected === 'Tools' ? 'purple' : 'lightgray'}`}}
+              minH={{base: 'auto', md: '60px'}}
+              borderBottom={{md: 0 , base: `2px solid ${selected === 'Tools' ? '#5800FF' : 'lightgray'}`}}
+              borderLeft={{base: 0 , md: `2px solid ${selected === 'Tools' ? '#5800FF' : 'lightgray'}`}}
               backgroundColor={"transparent"}
-              mt={6}
               onClick={handleClick}
               _hover={{
                 opacity: 0.7,
