@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import AboutInfo from "../components/About/AboutInfo";
 const About = () => {
   return (
-    <motion.div animate={{ opacity: [0, 1] }} transition={{ duration: 1 }}>
+    <motion.div whileInView={{ opacity: [0, 1] }} viewport={{once: true}}>
       <Flex
         direction={"column"}
         align={{ base: "center", md: "flex-start" }}

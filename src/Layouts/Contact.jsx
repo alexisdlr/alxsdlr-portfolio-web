@@ -3,7 +3,7 @@ import ContactForm from "../components/Contact/ContactForm";
 import { motion } from "framer-motion";
 const Contact = () => {
   return (
-    <motion.div animate={{ opacity: [0, 1] }} transition={{ duration: 1 }}>
+    <motion.div whileInView={{ opacity: [0, 1] }} viewport={{once: true}}>
       <Flex
         id={"contact"}
         direction={{ base: "column", md: "row" }}
