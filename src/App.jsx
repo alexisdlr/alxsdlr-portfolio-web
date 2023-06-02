@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../theme/theme";
 import Loader from "./components/Loader";
+import ToasterProvider from "./components/ToasterProvider";
 
 const Home = lazy(() => import("./Layouts/Home"));
 const Projects = lazy(() => import("./Layouts/Projects"));
@@ -14,11 +15,7 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <div className="App">
-        <Suspense
-          fallback={
-            <Loader />
-          }
-        >
+        <Suspense fallback={<Loader />}>
           <Home />
           <About />
           <Skills />

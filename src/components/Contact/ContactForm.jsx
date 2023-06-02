@@ -8,6 +8,8 @@ import {
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-hot-toast";
+import ToasterProvider from "../ToasterProvider";
 
 const ContactForm = () => {
   const form = useRef();
@@ -28,20 +30,22 @@ const ContactForm = () => {
           console.log(error.text);
         }
       );
-    alert("Email sended");
+    toast.success("Email sended");
   };
   return (
-    <Flex maxW={"full"} justify={"center"} alignItems={"center"}>
-      <form onSubmit={handleSubmit} ref={form}>
-        <FormControl
-          mx={"auto"}
-          px={{ base: 5, md: 0 }}
-          w={{ base: "full", md: "650px" }}
-        >
+    <Flex w={"80%"} justify={"center"} alignItems={"center"}>
+      <ToasterProvider />
+      <form onSubmit={handleSubmit} ref={form} style={{ width: "100%" }}>
+        <FormControl mx={"auto"} w={{ base: "full", md: "650px" }}>
           <FormLabel htmlFor="name">Name</FormLabel>
           <Input my={2} id="name" type="text" name="name" />
-          <FormLabel htmlFor='message'>Message</FormLabel>
-          <Textarea my={2} id="message" placeholder="Escribe aqui tu mensaje" name="message" />
+          <FormLabel htmlFor="message">Message</FormLabel>
+          <Textarea
+            my={2}
+            id="message"
+            placeholder="Escribe aqui tu mensaje"
+            name="message"
+          />
           <FormLabel htmlFor="email">Email </FormLabel>
           <Input my={2} id="email" type="email" name="email" />
           <Button mt={4} bg="purple" type="submit" _hover={{ opacity: 0.8 }}>

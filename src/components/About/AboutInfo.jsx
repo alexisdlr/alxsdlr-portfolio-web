@@ -23,7 +23,10 @@ const AboutInfo = () => {
             transform="rotate(-3deg)"
             height={{ base: "200px", md: "350px" }}
             position={"absolute"}
-            boxShadow={{base: '10px 1px 50px #070A52', md: '10px 1px 100px #070A52'}}
+            boxShadow={{
+              base: "10px 1px 50px #070A52",
+              md: "10px 1px 100px #070A52",
+            }}
             left={0}
             top={0}
             borderRadius={8}
@@ -34,43 +37,47 @@ const AboutInfo = () => {
             transform={"rotate(8deg)"}
             maxW={{ base: "200px", md: "350px" }}
             rounded={8}
-            boxShadow={{base: '10px 1px 85px #5800FF', md: '10px 1px 155px #5800FF'}}
+            boxShadow={{
+              base: "10px 1px 85px #5800FF",
+              md: "10px 1px 155px #5800FF",
+            }}
             objectFit={"cover"}
           />
         </Box>
-          <Box p={{ base: 3, md: 10 }} borderRadius={"8px"}>
-            <Text
-              as={"p"}
-              fontSize={{ base: "1rem", md: "xl" }}
-              color={"white"}
-              fontWeight={"normal"}
-            >
-              Hi! I am{" "}
-              <Text as={"span"} fontWeight={"bold"} color={"yellow"}>
-                Alexis De León
-              </Text>{" "}
-              a very hardworking{" "}
-              <Text as={"span"} fontWeight={"bold"} color={"yellow"}>
-                Web Developer
-              </Text>{" "}
-              from MX who wants to collaborate in amazing things. <br />
-              As a self-taught developer for almost 2 years, I love learning new
-              things, my main area of ​​learning is{" "}
-              <Text as={"span"} fontWeight={"bold"} color={"yellow"}>
-                Javascript
-              </Text>
-              , I enjoy building sites with technologies like{" "}
-              <Text as={"span"} fontWeight={"bold"} color={"blue.400"}>
-                ReactJs
-              </Text>
-              . I'm constantly learning, and also improving things I already
-              know, I have experience in{" "}
-              <Text as={"span"} fontWeight={"bold"} color={"yellow"}>
-                Front-end and in Back-end
-              </Text>
+        <Box p={{ base: 3, md: 10 }} borderRadius={"8px"}>
+          <Text
+            as={"p"}
+            maxW={{ base: 500, md: "100%" }}
+            fontSize={{ base: "1rem", md: "md", xl: "xl" }}
+            color={"white"}
+            fontWeight={"normal"}
+          >
+            Hi! I am{" "}
+            <Text as={"span"} fontWeight={"bold"} color={"yellow"}>
+              Alexis De León
+            </Text>{" "}
+            a very hardworking{" "}
+            <Text as={"span"} fontWeight={"bold"} color={"yellow"}>
+              Web Developer
+            </Text>{" "}
+            from MX who wants to collaborate in amazing things. <br />
+            As a self-taught developer for almost 2 years, I love learning new
+            things, my main area of ​​learning is{" "}
+            <Text as={"span"} fontWeight={"bold"} color={"yellow"}>
+              Javascript
             </Text>
-          </Box>
-        </Flex>
+            , I enjoy building sites with technologies like{" "}
+            <Text as={"span"} fontWeight={"bold"} color={"blue.400"}>
+              ReactJs
+            </Text>
+            . I'm constantly learning, and also improving things I already know,
+            I have experience in{" "}
+            <Text as={"span"} fontWeight={"bold"} color={"yellow"}>
+              Front-end and in Back-end
+            </Text>
+          </Text>
+        </Box>
+      </Flex>
     </Container>
   );
 };

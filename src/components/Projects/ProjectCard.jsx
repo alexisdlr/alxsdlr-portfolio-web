@@ -21,7 +21,14 @@ const ProjectCard = ({ project, index }) => {
         _hover={{ opacity: 0.8, transition: "300ms" }}
       >
         <Heading fontSize={{ base: "1rem", md: "xl" }}>{project.title}</Heading>
-        <Image alt={project.title} src={project.src} maxW={{base: 300, md: 400}} rounded={8} />
+        <Image
+          alt={project.title}
+          src={project.src}
+          maxW={{ base: 300, md: 400 }}
+          maxH={{ base: 300, md: 400 }}
+          objectFit={"cover"}
+          rounded={8}
+        />
         <Flex gap={3} p={0} my={0}>
           {project.technologies.map((tec, index) => (
             <Text
@@ -30,7 +37,7 @@ const ProjectCard = ({ project, index }) => {
               bg={"gray.800"}
               color={"white"}
               rounded={5}
-              fontSize={{base: 11, md: 'md'}}
+              fontSize={{ base: 11, md: "md" }}
               fontWeight={600}
               px={4}
               as={"span"}
@@ -52,14 +59,14 @@ const ProjectCard = ({ project, index }) => {
               transform: "translateY(-3px)",
             }}
             _active={{ opacity: 0.5 }}
-            fontSize={{base: 13, md: 'md'}}
+            fontSize={{ base: 13, md: "md" }}
           >
             View demo
           </ButtonPrimary>
           <ButtonPrimary
             href={project.code}
             rounded={"full"}
-            fontSize={{base: 13, md: 'md'}}
+            fontSize={{ base: 13, md: "md" }}
             bg={"yellow"}
             color={"black"}
             fontWeight={"bold"}
