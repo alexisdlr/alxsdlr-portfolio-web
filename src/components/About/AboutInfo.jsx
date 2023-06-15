@@ -13,7 +13,7 @@ const AboutInfo = () => {
       <Flex
         align={"center"}
         justify={"center"}
-        direction={{ base: "column", md: "row" }}
+        direction={{ base: "column", xl: "row" }}
         gap={{ base: 8, md: 10 }}
       >
         <Box position={"relative"}>

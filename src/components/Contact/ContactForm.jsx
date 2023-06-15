@@ -48,7 +48,13 @@ const ContactForm = () => {
           />
           <FormLabel htmlFor="email">Email </FormLabel>
           <Input my={2} id="email" type="email" name="email" />
-          <Button mt={4} bg="purple" type="submit" _hover={{ opacity: 0.8 }}>
+          <Button
+            width={"full"}
+            mt={4}
+            bg="purple"
+            type="submit"
+            _hover={{ opacity: 0.8 }}
+          >
             Submit
           </Button>
         </FormControl>

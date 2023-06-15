@@ -35,7 +35,10 @@ function Navbar() {
   };
 
   return (
-    <motion.div animate={{ y: [-50, 0] }} transition={{ duration: 0.3 }}>
+    <motion.div
+      whileInView={{ opacity: [0, 1] }}
+      transition={{ duration: 0.3 }}
+    >
       <Header>
         <NavContainer>
           <Logo open={open} />
