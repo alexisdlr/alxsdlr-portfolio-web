@@ -17,6 +17,7 @@ const ProjectCard = ({ project, index }) => {
         justify={"center"}
         align={"center"}
         gap={6}
+        mt={4}
         p={{ base: 8, md: 2 }}
         _hover={{ opacity: 0.8, transition: "300ms" }}
       >
@@ -24,8 +25,8 @@ const ProjectCard = ({ project, index }) => {
         <Image
           alt={project.title}
           src={project.src}
-          maxW={{ base: 300, md: 400 }}
-          maxH={{ base: 300, md: 400 }}
+          maxW={{ base: 300, "2xl": 300 }}
+          maxH={{ base: 300, "2xl": 300 }}
           objectFit={"cover"}
           rounded={8}
         />

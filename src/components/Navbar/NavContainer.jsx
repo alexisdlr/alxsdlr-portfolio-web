@@ -5,7 +5,7 @@ const NavContainer = ({children}) => {
     as="nav" 
     px={8} 
     maxW={'100%'} 
-    justifyContent={'space-between'} 
+    justifyContent={'end'} 
     alignItems='center'
     
     > 

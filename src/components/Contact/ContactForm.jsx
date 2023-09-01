@@ -33,10 +33,10 @@ const ContactForm = () => {
     toast.success("Email sended");
   };
   return (
-    <Flex w={"80%"} justify={"center"} alignItems={"center"}>
+    <Flex w={{base: "100%"}} justify={"center"} alignItems={"center"}>
       <ToasterProvider />
       <form onSubmit={handleSubmit} ref={form} style={{ width: "100%" }}>
-        <FormControl mx={"auto"} w={{ base: "full", md: "650px" }}>
+        <FormControl mx={"auto"} pr={{base: 0, md: 8, "2xl": 0}} w={{ base: "full", "2xl": "650px" }}>
           <FormLabel htmlFor="name">Name</FormLabel>
           <Input my={2} id="name" type="text" name="name" />
           <FormLabel htmlFor="message">Message</FormLabel>

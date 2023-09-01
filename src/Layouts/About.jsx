@@ -12,15 +12,15 @@ const About = () => {
     >
       <Heading
         color={"yellow"}
-        px={{ md: 8, xl: 0 }}
-        fontSize={{ base: "3xl", md: "7xl", xl: "8xl" }}
+        px={{ md: 8, "2xl": 0 }}
+        fontSize={{ base: "4xl", md: "4xl", lg: "6xl", "2xl": "7xl" }}
         lineHeight={"10"}
       >
         About me!
       </Heading>
       <Text
         color={"gray.300"}
-        px={{ md: 8, xl: 0 }}
+        px={{ md: 8, "2xl": 0 }}
         my={{ base: 0, md: 8 }}
         fontSize={{ base: "2xl", md: "4xl" }}
         fontWeight={"normal"}

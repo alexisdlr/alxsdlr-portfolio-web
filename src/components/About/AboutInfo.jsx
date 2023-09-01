@@ -18,10 +18,10 @@ const AboutInfo = () => {
       >
         <Box position={"relative"}>
           <Box
-            w={{ base: "200px", md: "350px" }}
+            w={{ base: "200px", md: "300px", "2xl": "350px" }}
+            height={{ base: "200px", md: "300px", "2xl": "350px" }}
             bg={"purple"}
             transform="rotate(-3deg)"
-            height={{ base: "200px", md: "350px" }}
             position={"absolute"}
             boxShadow={{
               base: "10px 1px 50px #070A52",
@@ -35,7 +35,7 @@ const AboutInfo = () => {
             alt="alexis de leon rodriguez"
             src={alxs}
             transform={"rotate(8deg)"}
-            maxW={{ base: "200px", md: "350px" }}
+            maxW={{ base: "200px", md: "300px", "2xl": "350px" }}
             rounded={8}
             boxShadow={{
               base: "10px 1px 85px #5800FF",
@@ -44,11 +44,11 @@ const AboutInfo = () => {
             objectFit={"cover"}
           />
         </Box>
-        <Box p={{ base: 3, md: 10 }} borderRadius={"8px"}>
+        <Box p={{ base: 3, md: 10 }} >
           <Text
             as={"p"}
             maxW={{ base: 500, md: "100%" }}
-            fontSize={{ base: "1rem", md: "md", xl: "xl" }}
+            fontSize={{ base: "1rem", md: "md", "2xl": "xl" }}
             color={"white"}
             fontWeight={"normal"}
           >

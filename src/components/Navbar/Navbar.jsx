@@ -41,7 +41,6 @@ function Navbar() {
     >
       <Header>
         <NavContainer>
-          <Logo open={open} />
           <MenuLinks
             open={open}
             toggle={toggle}

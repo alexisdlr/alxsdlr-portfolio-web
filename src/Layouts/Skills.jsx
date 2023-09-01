@@ -1,4 +1,4 @@
-import { Flex, Heading, Text } from "@chakra-ui/react";
+import { Flex, Heading, Text, Box } from "@chakra-ui/react";
 import Skill from "../components/Skills/Skill";
 import { motion } from "framer-motion";
 
@@ -18,16 +18,17 @@ const Skills = () => {
         >
           <Heading
             w={{ md: "full", xl: "contain" }}
-            textAlign={{ md: "center", xl: "left" }}
+            textAlign={{ base: "center", xl: "left" }}
             color={"yellow"}
-            px={{ md: 8, xl: 0 }}
-            fontSize={{ base: "4xl", md: "8xl" }}
+            px={{ md: 8, "2xl": 0 }}
+            fontSize={{ base: "4xl", md: "6xl", "2xl": "8xl" }}
           >
             Skills
           </Heading>
-          <Text
+          <Box p={{ base: 3, md: 10 }}  > 
+           <Text
             my={5}
-            px={{ md: 16, xl: 0 }}
+            px={{ base: 8, "2xl": 0 }}
             color="gray.100"
             maxW={{ base: 500, md: "100%" }}
             fontSize={{ base: "1rem", md: "md", xl: "xl" }}
@@ -37,6 +38,9 @@ const Skills = () => {
             new things, in addition, I like to build my projects with different
             languages ​​/ skills:
           </Text>
+
+          
+          </Box>
           <Skill />
         </Flex>
       </motion.div>

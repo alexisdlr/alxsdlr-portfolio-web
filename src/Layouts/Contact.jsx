@@ -17,9 +17,9 @@ const Contact = () => {
       >
         <Box as={"div"} textAlign={{ base: "center", md: "initial" }}>
           <Heading
-            px={{ md: 8, xl: 0 }}
+            px={{ md: 8, "2xl": 0 }}
             color={"yellow"}
-            fontSize={{ base: "3xl", md: "8xl" }}
+            fontSize={{ base: "3xl", md: "6xl", "2xl": "6xl" }}
             as={"h2"}
             lineHeight={"10"}
             my={8}
@@ -39,7 +39,7 @@ const Contact = () => {
           <Text
             as={"p"}
             maxW={{ base: 500, md: "100%" }}
-            px={{ md: 8, xl: 0 }}
+            px={{base: 8, md: 8, "2xl": 0 }}
             color={"gray.200"}
           >
             If you are interested in collaborating in any project, hire me or

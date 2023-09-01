@@ -18,14 +18,14 @@ const Projects = () => {
         >
           <Heading
             color={"yellow"}
-            px={{ md: 8, xl: 0 }}
-            fontSize={{ base: "4xl", md: "8xl" }}
+            px={{ md: 8, "2xl": 0 }}
+            fontSize={{ base: "4xl", md: "6xl", "2xl": "8xl" }}
           >
             Projects
           </Heading>
           <Text
             mb={{ base: 2, md: 16 }}
-            px={{ md: 8, xl: 0 }}
+            px={{ md: 8, "2xl": 0 }}
             color="gray.100"
             textAlign={{ base: "center", md: "left" }}
             fontSize={{ base: "1.1rem", md: "2xl" }}

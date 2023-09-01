@@ -19,7 +19,7 @@ const Footer = () => {
         flexDirection={'column'}
       >
         <Heading
-          px={{ base: 8, md: 0 }}
+          px={{ base: 8, "2xl": 0 }}
           textAlign={"center"}
           color={"yellow"}
           fontSize={{ base: "2xl", md: "4xl" }}
@@ -31,6 +31,7 @@ const Footer = () => {
         </Heading>
         <Text
           color={"gray.400"}
+          px={{base:8, "2xl": 0}}
           textAlign={{ base: "center", md: "initial" }}
           fontSize={{ base: "xl", md: "3xl" }}
           fontWeight={"light"}
@@ -41,7 +42,7 @@ const Footer = () => {
         </Text>
       </Flex>
       <SocialLinks size={7} />
-      <Box mb={{ base: 4, md: 0 }}>Made with ❤ by Alexis De Leon © 2022</Box>
+      <Box mb={{ base: 4, md: 0 }} pr={{base: 0,md: 8, "2xl": 0}}>Made with ❤ by Alexis De Leon © 2022</Box>
     </Flex>
   );
 };

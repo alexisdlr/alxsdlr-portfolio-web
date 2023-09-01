@@ -14,8 +14,9 @@ const Hero = () => {
         gap={8}
       >
         <Heading
-          fontSize={{ base: "3xl", md: "5xl", lg: "7xl" }}
+          fontSize={{ base: "2xl", md: "4xl", lg: "5xl", "2xl": "7xl" }}
           textAlign={"center"}
+          color={'gray.200'}
         >
           <Text as={"span"}>
             Hello I'm{" "}
@@ -44,7 +45,7 @@ const Hero = () => {
           Based in Mexico
         </Heading>
         <Text
-          fontSize={{ base: "1rem", md: "3xl", lg: "4xl" }}
+          fontSize={{ base: "1rem", md: "2xl", lg: "3xl", "2xl": "4xl" }}
           color={"gray.100"}
         >
           I create and code webs, and I love what I do.
