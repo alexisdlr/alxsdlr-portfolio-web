@@ -3,9 +3,8 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import {
   APP_BG,
-  APP_HORIZONTAL_PADDING,
+  APP_BOTTOM_NAV_GUTTER,
   APP_MAX_WIDTH,
-  APP_SIDEBAR_GUTTER,
 } from "../constants/layout";
 
 const AppLayout = () => {
@@ -16,8 +15,7 @@ const AppLayout = () => {
         maxW={APP_MAX_WIDTH}
         mx="auto"
         w="full"
-        px={APP_HORIZONTAL_PADDING}
-        pl={APP_SIDEBAR_GUTTER}
+        pb={APP_BOTTOM_NAV_GUTTER}
         minH="100dvh"
       >
         <Outlet />

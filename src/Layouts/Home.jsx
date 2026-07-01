@@ -1,7 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import Hero from "../components/Home/Hero";
 import HeroGlow from "../components/Home/HeroGlow";
-import { motion } from "framer-motion";
 
 const Home = () => {
   return (
@@ -25,14 +24,7 @@ const Home = () => {
       </Box>
 
       <Box position="relative" zIndex={1} w="full">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          style={{ width: "100%" }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <Hero />
-        </motion.div>
+        <Hero />
       </Box>
     </Box>
   );

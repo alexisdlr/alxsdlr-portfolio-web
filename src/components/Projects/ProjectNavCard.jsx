@@ -55,8 +55,8 @@ const ProjectNavCard = ({ project, direction }) => {
             </Heading>
             <Box position="absolute" top={4} right={4}>
               <ProjectBadge
+                statusKey={localizedProject.statusKey}
                 status={localizedProject.status}
-                statusColor={localizedProject.statusColor}
               />
             </Box>
             <Image

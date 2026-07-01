@@ -67,8 +67,8 @@ const ProjectDetailPage = () => {
               {project.title}
             </Heading>
             <ProjectBadge
+              statusKey={project.statusKey}
               status={project.status}
-              statusColor={project.statusColor}
             />
           </Flex>
         </Flex>

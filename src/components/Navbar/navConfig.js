@@ -2,9 +2,9 @@ import { LuBriefcase, LuCode, LuHouse, LuUser } from "react-icons/lu";
 
 export const NAV_LINKS = [
   { id: "home", labelKey: "nav.home", icon: LuHouse },
-  { id: "about", labelKey: "nav.about", icon: LuUser, href: "/about" },
   { id: "experience", labelKey: "nav.experience", icon: LuBriefcase },
   { id: "projects", labelKey: "nav.projects", icon: LuCode },
+  { id: "about", labelKey: "nav.about", icon: LuUser, href: "/about" },
 ];
 
 export const SCROLL_SECTION_IDS = NAV_LINKS.filter((link) => !link.href).map(

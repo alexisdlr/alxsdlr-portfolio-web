@@ -3,8 +3,9 @@ import { translations } from "../i18n/translations";
 import projectsData from "../components/Projects/projects";
 
 const STATUS_KEY_MAP = {
-  Finalizado: "finished",
+  Finalizado: "completed",
   Publicado: "published",
+  "En desarrollo": "inDevelopment",
 };
 
 export const getLocalizedProject = (project, locale) => {

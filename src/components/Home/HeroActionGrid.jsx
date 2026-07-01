@@ -1,4 +1,5 @@
 import { Grid } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import { toast } from "react-hot-toast";
 import { LuCopy, LuDownload, LuExternalLink, LuMail } from "react-icons/lu";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -7,7 +8,16 @@ import { useTranslation } from "../../i18n/useTranslation";
 import { CV_URL } from "../Navbar/navConfig";
 import HeroActionButton from "./HeroActionButton";
 
-const HeroActionGrid = (props) => {
+const MotionGrid = motion.create(Grid);
+const MotionBox = motion.div;
+
+const HeroActionGrid = ({
+  motionVariants,
+  itemVariants,
+  motionInitial,
+  motionAnimate,
+  ...props
+}) => {
   const { t } = useTranslation();
 
   const copyEmail = async () => {
@@ -19,48 +29,78 @@ const HeroActionGrid = (props) => {
     }
   };
 
+  const buttons = [
+    {
+      key: "cv",
+      icon: LuDownload,
+      label: t("actions.cv"),
+      tooltip: t("actions.cvTooltip"),
+      href: CV_URL,
+      target: "_blank",
+      rel: "noopener noreferrer",
+      actionIcon: LuDownload,
+    },
+    {
+      key: "linkedin",
+      icon: FaLinkedin,
+      label: "LinkedIn",
+      tooltip: t("actions.linkedinTooltip"),
+      href: PROFILE.linkedin,
+      target: "_blank",
+      rel: "noopener noreferrer",
+      actionIcon: LuExternalLink,
+    },
+    {
+      key: "github",
+      icon: FaGithub,
+      label: "GitHub",
+      tooltip: t("actions.githubTooltip"),
+      href: PROFILE.github,
+      target: "_blank",
+      rel: "noopener noreferrer",
+      actionIcon: LuExternalLink,
+    },
+    {
+      key: "mail",
+      icon: LuMail,
+      tooltip: t("actions.emailTooltip"),
+      label: t("actions.mail"),
+      onClick: copyEmail,
+      actionIcon: LuCopy,
+    },
+  ];
+
+  if (!motionVariants) {
+    return (
+      <Grid
+        templateColumns={{ base: "1fr", sm: "1fr 1fr" }}
+        gap={4}
+        w="full"
+        {...props}
+      >
+        {buttons.map((button) => (
+          <HeroActionButton key={button.key} {...button} />
+        ))}
+      </Grid>
+    );
+  }
+
   return (
-    <Grid
+    <MotionGrid
+      variants={motionVariants}
+      initial={motionInitial}
+      animate={motionAnimate}
       templateColumns={{ base: "1fr", sm: "1fr 1fr" }}
       gap={4}
       w="full"
       {...props}
     >
-      <HeroActionButton
-        icon={LuDownload}
-        label={t("actions.cv")}
-        tooltip={t("actions.cvTooltip")}
-        href={CV_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        actionIcon={LuDownload}
-      />
-      <HeroActionButton
-        icon={FaLinkedin}
-        label="LinkedIn"
-        tooltip={t("actions.linkedinTooltip")}
-        href={PROFILE.linkedin}
-        target="_blank"
-        rel="noopener noreferrer"
-        actionIcon={LuExternalLink}
-      />
-      <HeroActionButton
-        icon={FaGithub}
-        label="GitHub"
-        tooltip={t("actions.githubTooltip")}
-        href={PROFILE.github}
-        target="_blank"
-        rel="noopener noreferrer"
-        actionIcon={LuExternalLink}
-      />
-      <HeroActionButton
-        icon={LuMail}
-        tooltip={t("actions.emailTooltip")}
-        label={t("actions.mail")}
-        onClick={copyEmail}
-        actionIcon={LuCopy}
-      />
-    </Grid>
+      {buttons.map((button) => (
+        <MotionBox key={button.key} variants={itemVariants}>
+          <HeroActionButton {...button} />
+        </MotionBox>
+      ))}
+    </MotionGrid>
   );
 };
 

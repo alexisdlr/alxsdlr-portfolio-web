@@ -63,7 +63,11 @@ const About = () => {
           >
             {t("about.education.title")}
           </SectionTitle>
-          <Text color="gray.400" fontSize={{ base: "md", md: "lg" }} mb={{ base: 6, md: 8 }}>
+          <Text
+            color="gray.400"
+            fontSize={{ base: "md", md: "lg" }}
+            mb={{ base: 6, md: 8 }}
+          >
             {t("about.education.subtitle")}
           </Text>
 

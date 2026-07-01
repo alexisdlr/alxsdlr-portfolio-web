@@ -3,9 +3,8 @@ import { Box } from "@chakra-ui/react";
 import Loader from "../components/Loader";
 import {
   APP_BG_DARK,
-  APP_HORIZONTAL_PADDING,
+  APP_BOTTOM_NAV_GUTTER,
   APP_MAX_WIDTH,
-  APP_SIDEBAR_GUTTER,
 } from "../constants/layout";
 
 const Home = lazy(() => import("../Layouts/Home"));
@@ -50,11 +49,10 @@ const PortfolioPage = () => {
             maxW={APP_MAX_WIDTH}
             mx="auto"
             w="full"
-            px={APP_HORIZONTAL_PADDING}
-            pl={APP_SIDEBAR_GUTTER}
+            pb={APP_BOTTOM_NAV_GUTTER}
           >
-            <Experience />
             <Projects />
+            <Experience />
             <Footer />
           </Box>
         </Box>

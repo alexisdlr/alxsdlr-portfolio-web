@@ -31,22 +31,23 @@ const ExperienceItem = ({ item, isLast }) => {
 
   return (
     <>
-      <Flex gap={{ base: 4, md: 5 }} align="flex-start" w="full">
+      <Flex gap={{ base: 3, md: 5 }} align="flex-start" w="full">
         <ExperienceLogo logo={item.logo} />
 
         <Box flex="1" minW={0}>
           <Heading
             as="h3"
-            fontSize={{ base: "lg", md: "xl" }}
+            fontSize={{ base: "md", md: "xl" }}
             fontWeight="bold"
             color="white"
-            lineHeight="1.3"
+            lineHeight="1.35"
             mb={1}
+            wordBreak="break-word"
           >
             {t(`${base}.role`)}
           </Heading>
 
-          <Text color="gray.300" fontSize={{ base: "sm", md: "md" }} mb={0.5}>
+          <Text color="gray.300" fontSize={{ base: "sm", md: "md" }} mb={0.5} wordBreak="break-word">
             {t(`${base}.company`)} · {t(`${base}.employmentType`)}
           </Text>
 
@@ -149,14 +150,20 @@ const ExperienceItem = ({ item, isLast }) => {
             </Text>
           )}
 
-          <Flex align="center" gap={2} color="gray.500" fontSize={{ base: "sm", md: "md" }}>
+          <Flex
+            align="center"
+            gap={2}
+            color="gray.500"
+            fontSize={{ base: "sm", md: "md" }}
+            flexWrap="wrap"
+          >
             <LuDiamond size={14} />
-            <Text>{t(`${base}.skills`)}</Text>
+            <Text wordBreak="break-word">{t(`${base}.skills`)}</Text>
           </Flex>
         </Box>
       </Flex>
 
-      {!isLast && <Separator borderColor="whiteAlpha.100" my={{ base: 8, md: 10 }} />}
+      {!isLast && <Separator borderColor="whiteAlpha.100" my={{ base: 6, md: 10 }} />}
     </>
   );
 };

@@ -50,7 +50,8 @@ export const translations = {
           cetis239: {
             school:
               "Centro de Bachillerato Tecnológico Industrial y de Servicios No. 239",
-            degree: "Bachillerato, Soporte y mantenimiento de equipo de cómputo",
+            degree:
+              "Bachillerato, Soporte y mantenimiento de equipo de cómputo",
             period: "sep. 2018 – jul. 2021",
           },
         },
@@ -86,7 +87,8 @@ export const translations = {
           employmentType: "Jornada completa",
           period: "feb. 2025 - actualidad · 1 año 5 meses",
           location: "Remoto",
-          tagline: "Desarrollador de Soluciones Digitales | Integraciones con Zoho",
+          tagline:
+            "Desarrollador de Soluciones Digitales | Integraciones con Zoho",
           intro:
             "En Hold Marketing, me especializo en el desarrollo de soluciones digitales e integraciones con Zoho, optimizando la gestión y automatización de procesos empresariales.",
           areas: [
@@ -139,8 +141,9 @@ export const translations = {
       viewAll: "Ver todos los proyectos →",
       viewProject: "Ver proyecto",
       status: {
-        finished: "Finalizado",
+        completed: "Finalizado",
         published: "Publicado",
+        inDevelopment: "En desarrollo",
       },
       items: {
         unibetas: {
@@ -193,7 +196,7 @@ export const translations = {
     },
     footer: {
       role: "Ingeniero de software · Full-stack.",
-      madeWith: "Hecho con ❤ por Alexis De Leon © 2022",
+      madeWith: "Hecho con ❤ por Alexis De Leon © 2026",
     },
   },
   en: {
@@ -336,8 +339,9 @@ export const translations = {
       viewAll: "View all projects →",
       viewProject: "View project",
       status: {
-        finished: "Completed",
+        completed: "Completed",
         published: "Published",
+        inDevelopment: "In development",
       },
       items: {
         unibetas: {
