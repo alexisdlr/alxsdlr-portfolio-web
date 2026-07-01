@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 import { Suspense, lazy } from "react";
 import Loader from "../components/Loader";
 
-const About = lazy(() => import("../Layouts/About"));
+const About = lazy(() => import("../layouts/About"));
 
 const AboutPage = () => {
   return (

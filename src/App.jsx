@@ -2,7 +2,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { system } from "../theme/theme";
 import ToasterProvider from "./components/ToasterProvider";
-import AppLayout from "./Layouts/AppLayout";
+import AppLayout from "./layouts/AppLayout";
 import AboutPage from "./pages/AboutPage";
 import PortfolioPage from "./pages/PortfolioPage";
 import ProjectDetailPage from "./pages/ProjectDetailPage";

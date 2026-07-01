@@ -7,10 +7,10 @@ import {
   APP_MAX_WIDTH,
 } from "../constants/layout";
 
-const Home = lazy(() => import("../Layouts/Home"));
-const Experience = lazy(() => import("../Layouts/Experience"));
-const Projects = lazy(() => import("../Layouts/Projects"));
-const Footer = lazy(() => import("../Layouts/Footer"));
+const Home = lazy(() => import("../layouts/Home"));
+const Experience = lazy(() => import("../layouts/Experience"));
+const Projects = lazy(() => import("../layouts/Projects"));
+const Footer = lazy(() => import("../layouts/Footer"));
 
 const sectionFadeMask = {
   base: "linear-gradient(to bottom, transparent 0%, black 100px)",
