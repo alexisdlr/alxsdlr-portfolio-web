@@ -1,28 +1,25 @@
-import React, { Suspense, lazy } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
-import theme from "../theme/theme";
-import Loader from "./components/Loader";
-
-const Home = lazy(() => import("./Layouts/Home"));
-const Projects = lazy(() => import("./Layouts/Projects"));
-const Skills = lazy(() => import("./Layouts/Skills"));
-const About = lazy(() => import("./Layouts/About"));
-const Contact = lazy(() => import("./Layouts/Contact"));
-const Footer = lazy(() => import("./Layouts/Footer"));
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { system } from "../theme/theme";
+import ToasterProvider from "./components/ToasterProvider";
+import AppLayout from "./layouts/AppLayout";
+import AboutPage from "./pages/AboutPage";
+import PortfolioPage from "./pages/PortfolioPage";
+import ProjectDetailPage from "./pages/ProjectDetailPage";
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <div className="App">
-        <Suspense fallback={<Loader />}>
-          <Home />
-          <About />
-          <Skills />
-          <Projects />
-          <Contact />
-          <Footer />
-        </Suspense>
-      </div>
+    <ChakraProvider value={system}>
+      <ToasterProvider />
+      <BrowserRouter>
+        <Routes>
+          <Route element={<AppLayout />}>
+            <Route path="/" element={<PortfolioPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/projects/:slug" element={<ProjectDetailPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </ChakraProvider>
   );
 }

@@ -1,25 +1,41 @@
 import { Box } from "@chakra-ui/react";
 import Hero from "../components/Home/Hero";
+import HeroGlow from "../components/Home/HeroGlow";
 import { motion } from "framer-motion";
-import Navbar from "../components/Navbar/Navbar";
 
 const Home = () => {
   return (
     <Box
-      h={"100vh"}
-      display={"flex"}
-      alignItems={"center"}
-      justifyContent={"center"}
+      as="section"
+      position="relative"
+      minH="100dvh"
+      w="full"
     >
-      <Navbar />
-      <motion.div
-        whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
+      <Box
+        position="absolute"
+        top={0}
+        left="50%"
+        transform="translateX(-50%)"
+        w="100vw"
+        minH="100dvh"
+        pointerEvents="none"
+        zIndex={0}
       >
-        <Hero />
-      </motion.div>
+        <HeroGlow />
+      </Box>
+
+      <Box position="relative" zIndex={1} w="full">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          style={{ width: "100%" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <Hero />
+        </motion.div>
+      </Box>
     </Box>
   );
 };
+
 export default Home;

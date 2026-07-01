@@ -1,42 +1,57 @@
-import { Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Link, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import ListProjects from "../components/Projects/ListProject";
-const Projects = () => {
-  return (
-    <>
-      <motion.div whileInView={{ opacity: [0, 1] }} viewport={{ once: true }}>
-        <Flex
-          id="projects"
-          as={"section"}
-          my={{ base: "24", md: "36" }}
-          minH={{ base: "85vh", md: "100vh" }}
-          justify={"center"}
-          align={{ base: "center", md: "flex-start" }}
-          direction={"column"}
-          maxW={1350}
-          mx={"auto"}
-        >
-          <Heading
-            color={"yellow"}
-            px={{ md: 8, "2xl": 0 }}
-            fontSize={{ base: "4xl", md: "6xl", "2xl": "8xl" }}
-          >
-            Projects
-          </Heading>
-          <Text
-            mb={{ base: 2, md: 16 }}
-            px={{ md: 8, "2xl": 0 }}
-            color="gray.100"
-            textAlign={{ base: "center", md: "left" }}
-            fontSize={{ base: "1.1rem", md: "2xl" }}
-          >
-            A little section of my recents web projects
-          </Text>
+import { ALL_PROJECTS_URL } from "../components/Projects/projects";
+import ProjectsGrid from "../components/Projects/ProjectsGrid";
+import SectionTitle from "../components/SectionTitle";
+import { useTranslation } from "../i18n/useTranslation";
 
-          <ListProjects />
+const Projects = () => {
+  const { t } = useTranslation();
+
+  return (
+    <motion.div whileInView={{ opacity: [0, 1] }} viewport={{ once: true }}>
+      <Box id="projects" as="section" mb={{ base: "24", md: "36" }}>
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          justify="space-between"
+          align={{ base: "flex-start", md: "flex-end" }}
+          gap={4}
+          mb={{ base: 8, md: 10 }}
+        >
+          <Box>
+            <SectionTitle
+              color="white"
+              fontSize={{ base: "3xl", md: "5xl", "2xl": "6xl" }}
+              mb={2}
+            >
+              {t("projects.title")}
+            </SectionTitle>
+            <Text
+              color="gray.400"
+              fontSize={{ base: "md", md: "lg" }}
+              maxW="520px"
+            >
+              {t("projects.subtitle")}
+            </Text>
+          </Box>
+
+          <Link
+            href={ALL_PROJECTS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            color="gray.400"
+            fontSize={{ base: "sm", md: "md" }}
+            whiteSpace="nowrap"
+            _hover={{ color: "purple", textDecoration: "none" }}
+            transition="color 0.2s"
+          >
+            {t("projects.viewAll")}
+          </Link>
         </Flex>
-      </motion.div>
-    </>
+
+        <ProjectsGrid />
+      </Box>
+    </motion.div>
   );
 };
 

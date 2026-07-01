@@ -1,56 +1,82 @@
-import { useState, useEffect } from "react";
+import { Box, Flex, Separator } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import Header from "./Header";
+import { useDocumentLang } from "../../i18n/useDocumentLang";
+import { useTranslation } from "../../i18n/useTranslation";
+import { useSectionNavigation } from "./hooks/useSectionNavigation";
+import LanguageToggle from "./LanguageToggle";
 import Logo from "./Logo";
-import MenuLinks from "./MenuLinks";
-import MenuToggle from "./MenuToggle";
-import NavContainer from "./NavContainer";
+import NavIconButton from "./NavIconButton";
+import { NAV_LINKS } from "./navConfig";
+
+const MotionBox = motion.create(Box);
 
 function Navbar() {
-  const [open, setOpen] = useState(false);
-
-  const toggle = () => setOpen(!open);
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  const handleScroll = () => setScrollPosition(window.scrollY);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-
-    if (section) {
-      const sectionPosition = section.offsetTop;
-
-      window.scrollTo({
-        top: sectionPosition,
-        left: 0,
-        behavior: "smooth",
-      });
-    }
-  };
+  useDocumentLang();
+  const { t } = useTranslation();
+  const { activeSection, navigateToSection } = useSectionNavigation();
 
   return (
-    <motion.div
-      whileInView={{ opacity: [0, 1] }}
-      transition={{ duration: 0.3 }}
+    <Box
+      position="fixed"
+      left={{ base: 3, md: 5 }}
+      top="50%"
+      transform="translateY(-50%)"
+      zIndex={99}
     >
-      <Header>
-        <NavContainer>
-          <MenuLinks
-            open={open}
-            toggle={toggle}
-            scrollToSection={scrollToSection}
-          />
+      <MotionBox
+        as="nav"
+        id="main-nav-menu"
+        aria-label={t("nav.ariaMainNav")}
+        initial={{ x: -72, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{
+          duration: 0.35,
+          ease: "easeOut",
+          delay: 0.15,
+          type: "spring",
+        }}
+      >
+        <Flex
+          direction="column"
+          align="center"
+          gap={3}
+          py={4}
+          px={2.5}
+          bg="rgba(255, 255, 255, 0.06)"
+          border="1px solid"
+          borderColor="whiteAlpha.100"
+          borderRadius="full"
+          backdropFilter="auto"
+          backdropBlur="12px"
+          boxShadow="0 12px 40px rgba(0, 0, 0, 0.35)"
+        >
+          <Flex
+            as="ul"
+            direction="column"
+            align="center"
+            gap={2}
+            listStyleType="none"
+            m={0}
+            p={0}
+          >
+            {NAV_LINKS.map(({ id, labelKey, icon }) => (
+              <Box as="li" key={id}>
+                <NavIconButton
+                  icon={icon}
+                  label={t(labelKey)}
+                  isActive={activeSection === id}
+                  onClick={() => navigateToSection(id)}
+                />
+              </Box>
+            ))}
+          </Flex>
 
-          <MenuToggle toggle={toggle} isOpen={open} />
-        </NavContainer>
-      </Header>
-    </motion.div>
+          <Separator borderColor="whiteAlpha.200" w="70%" />
+
+          <LanguageToggle variant="sidebar" />
+        </Flex>
+      </MotionBox>
+    </Box>
   );
 }
 

@@ -1,49 +1,58 @@
-import { Flex, Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Grid, Heading, Text } from "@chakra-ui/react";
 import { SocialLinks } from "../components/Footer/SocialLinks";
+import { useTranslation } from "../i18n/useTranslation";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
-    <Flex
-      my={{ base: "100px", md: 100 }}
-      direction={{ base: "column", md: "row" }}
-      align={"center"}
-      justify={{base: 'center', md: "space-between"}}
-      maxW={1350}
-      mx={"auto"}
-      gap={4}
-      as={"section"}
+    <Box
+      as="footer"
+      w="full"
+      pt={{ base: 16, md: 20 }}
+      pb={{ base: 10, md: 12 }}
+      mt={{ base: 12, md: 16 }}
     >
-      <Flex
-        w={{ base: "100%", md:'auto' }}
-        justify={"center"}
-        flexDirection={'column'}
+      <Grid
+        templateColumns={{ base: "1fr", md: "1fr auto 1fr" }}
+        templateRows={{ base: "auto", md: "auto" }}
+        alignItems={{ base: "center", md: "center" }}
+        gap={{ base: 6, md: 8 }}
+        w="full"
       >
-        <Heading
-          px={{ base: 8, "2xl": 0 }}
-          textAlign={"center"}
-          color={"yellow"}
-          fontSize={{ base: "2xl", md: "4xl" }}
-          as={"h2"}
-          lineHeight={"10"}
-          my={{ base: 0, md: 2 }}
-        >
-          Alexis De León Rodriguez
-        </Heading>
+        <Box textAlign={{ base: "center", md: "left" }}>
+          <Heading
+            color="yellow"
+            fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+            lineHeight="1.2"
+            mb={1}
+          >
+            Alexis De León Rodriguez
+          </Heading>
+          <Text
+            color="gray.400"
+            fontSize={{ base: "lg", md: "xl" }}
+            fontWeight="light"
+          >
+            {t("footer.role")}
+          </Text>
+        </Box>
+
+        <Box justifySelf={{ base: "center", md: "center" }}>
+          <SocialLinks size={7} />
+        </Box>
+
         <Text
-          color={"gray.400"}
-          px={{base:8, "2xl": 0}}
-          textAlign={{ base: "center", md: "initial" }}
-          fontSize={{ base: "xl", md: "3xl" }}
-          fontWeight={"light"}
-          as={"span"}
-          mb={1}
+          color="gray.500"
+          fontSize={{ base: "sm", md: "md" }}
+          textAlign={{ base: "center", md: "right" }}
+          justifySelf={{ base: "center", md: "end" }}
         >
-          Web developer.
+          {t("footer.madeWith")}
         </Text>
-      </Flex>
-      <SocialLinks size={7} />
-      <Box mb={{ base: 4, md: 0 }} pr={{base: 0,md: 8, "2xl": 0}}>Made with ❤ by Alexis De Leon © 2022</Box>
-    </Flex>
+      </Grid>
+    </Box>
   );
 };
+
 export default Footer;

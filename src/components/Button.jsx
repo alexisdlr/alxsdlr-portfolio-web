@@ -2,7 +2,12 @@ import { Link, Button } from "@chakra-ui/react";
 
 export const ButtonPrimary = ({ children, href, ...rest }) => {
   return (
-    <Link target={"_blank"}   _hover={{ textDecor: "none" }} href={href}>
+    <Link
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      _hover={{ textDecoration: "none" }}
+    >
       <Button {...rest}>{children}</Button>
     </Link>
   );

@@ -1,37 +1,46 @@
-import { extendTheme } from '@chakra-ui/react'
+import { createSystem, defaultConfig, defineConfig } from "@chakra-ui/react";
 
-// Version 1: Using objects
-const theme = extendTheme({
-  colors: {
-    purple: '#5800FF',
-    yellow: '#FFC600',
-    black: '#000',
-    white: '#fff'
-  },
-  styles: {
-    global: {
-      // styles for the `body`
-    
-      body: {
-        bg: '#000114',
-        color: '#fff',
-        '@media (max-width: 500px)': {
-          display: 'flex'
-        },
-        overflowX: 'hidden',
-        '&::-webkit-scrollbar':  {
-          width: '12px',
-          backgroundColor: '#000114'
-         },
-         '&::-webkit-scrollbar-thumb': {
-          borderRadius: '50px',
-          backgroundColor: '#5800FF' }
+const config = defineConfig({
+  theme: {
+    tokens: {
+      fonts: {
+        heading: { value: "'Archivo', sans-serif" },
+        body: { value: "'Archivo', sans-serif" },
+        display: { value: "'Advent Pro', sans-serif" },
       },
-     
-      
-      // styles for the `a`
-      
+      colors: {
+        purple: { value: "#00C68D" },
+        yellow: { value: "#FFC600" },
+      },
     },
   },
-})
-export default theme
+  globalCss: {
+    html: {
+      fontFamily: "body",
+      bg: "#080A0F",
+      colorScheme: "dark",
+      "--color-hero-gradient-glow": "rgba(0, 198, 141, 0.42)",
+    },
+    body: {
+      fontFamily: "body",
+
+      color: "gray.200",
+      overflowX: "hidden",
+      minH: "100dvh",
+      "&::-webkit-scrollbar": {
+        width: "9px",
+        bg: "#080A0F",
+      },
+      "&::-webkit-scrollbar-thumb": {
+        borderRadius: "50px",
+        bg: "#00C68D",
+      },
+    },
+    "#root": {
+      minH: "100dvh",
+      bg: "#080A0F",
+    },
+  },
+});
+
+export const system = createSystem(defaultConfig, config);

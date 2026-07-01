@@ -5,7 +5,7 @@ import Icons from "./Icons";
 import { variants } from "../../constants/variants";
 export const SocialLinks = ({ size }) => {
   return (
-    <Flex gap={5} my={5}>
+    <Flex gap={5} my={0}>
       {Icons.map((item, index) => (
         <motion.div
         key={item.id}

@@ -1,36 +1,81 @@
-import { Flex, Heading, Text } from "@chakra-ui/react";
-import AboutInfo from "../components/About/AboutInfo";
+import { Box, Flex, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { LuCalendar, LuTarget } from "react-icons/lu";
+import { ABOUT_STATS } from "../constants/about";
+import { useTranslation } from "../i18n/useTranslation";
+import { formatBoldText } from "../utils/formatBoldText";
+import SectionTitle from "../components/SectionTitle";
+import AboutLinks from "../components/About/AboutLinks";
+import EducationList from "../components/About/EducationList";
+import StatCard from "../components/About/StatCard";
+import TechnologiesSection from "../components/About/TechnologiesSection";
+import ExperienceSection from "../components/Experience/ExperienceSection";
+
 const About = () => {
+  const { t } = useTranslation();
+
   return (
-    <Flex
-      direction={"column"}
-      align={{ base: "center", md: "flex-start" }}
-      maxW={1350}
-      mx={"auto"}
-      my={{ base: "10", md: "30" }}
-      minH={{ base: "90vh", md: "100vh" }}
-    >
-      <Heading
-        color={"yellow"}
-        px={{ md: 8, "2xl": 0 }}
-        fontSize={{ base: "4xl", md: "4xl", lg: "6xl", "2xl": "7xl" }}
-        lineHeight={"10"}
-      >
-        About me!
-      </Heading>
-      <Text
-        color={"gray.300"}
-        px={{ md: 8, "2xl": 0 }}
-        my={{ base: 0, md: 8 }}
-        fontSize={{ base: "2xl", md: "4xl" }}
-        fontWeight={"normal"}
-        textAlign={{ base: "center", md: "initial" }}
-        as={"span"}
-      >
-        Who I am
-      </Text>
-      <AboutInfo />
-    </Flex>
+    <motion.div whileInView={{ opacity: [0, 1] }} viewport={{ once: true }}>
+      <Box as="section">
+        <Box mb={{ base: 16, md: 20 }}>
+          <SectionTitle
+            color="white"
+            fontSize={{ base: "3xl", md: "5xl", "2xl": "6xl" }}
+            mb={{ base: 5, md: 6 }}
+          >
+            {t("about.title")}
+          </SectionTitle>
+
+          <Text
+            color="gray.400"
+            fontSize={{ base: "md", md: "lg" }}
+            lineHeight="1.7"
+            maxW="720px"
+          >
+            {formatBoldText(t("about.bio"))}
+          </Text>
+
+          <AboutLinks />
+
+          <Flex
+            direction={{ base: "column", sm: "row" }}
+            gap={4}
+            mt={{ base: 8, md: 10 }}
+          >
+            <StatCard
+              icon={LuTarget}
+              value={ABOUT_STATS.projects}
+              label={t("about.stats.projects")}
+            />
+            <StatCard
+              icon={LuCalendar}
+              value={ABOUT_STATS.yearsExperience}
+              label={t("about.stats.experience")}
+            />
+          </Flex>
+        </Box>
+
+        <Box mb={{ base: 16, md: 20 }}>
+          <SectionTitle
+            color="white"
+            fontSize={{ base: "3xl", md: "5xl", "2xl": "6xl" }}
+            mb={2}
+          >
+            {t("about.education.title")}
+          </SectionTitle>
+          <Text color="gray.400" fontSize={{ base: "md", md: "lg" }} mb={{ base: 6, md: 8 }}>
+            {t("about.education.subtitle")}
+          </Text>
+
+          <EducationList />
+        </Box>
+
+        <ExperienceSection />
+
+        <TechnologiesSection />
+      </Box>
+    </motion.div>
   );
 };
+
 export default About;

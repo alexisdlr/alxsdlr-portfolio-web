@@ -30,7 +30,7 @@ const Skill = () => {
             <Button
               w={"120px"}
               backgroundColor={"transparent"}
-              textColor={"lightgray"}
+              color="lightgray"
               mt={{base: 0, md: 6}}
               minH={{base: 'auto', md: '60px'}}
               borderRadius={0}
@@ -49,7 +49,7 @@ const Skill = () => {
             <Button
               w={"120px"}
               backgroundColor={"transparent"}
-              textColor={"lightgray"}
+              color="lightgray"
               minH={{base: 'auto', md: '60px'}}
               borderRadius={0}
               borderBottom={{md: 0 , base: `2px solid ${selected === 'Backend' ? '#5800FF' : 'lightgray'}`}}
@@ -67,7 +67,7 @@ const Skill = () => {
             <Button
               w={"120px"}
               borderRadius={0}
-              textColor={"lightgray"}
+              color="lightgray"
               minH={{base: 'auto', md: '60px'}}
               borderBottom={{md: 0 , base: `2px solid ${selected === 'Tools' ? '#5800FF' : 'lightgray'}`}}
               borderLeft={{base: 0 , md: `2px solid ${selected === 'Tools' ? '#5800FF' : 'lightgray'}`}}
