@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Archivo";
-  src: url("./Archivo-VariableFont_wdth,wght.ttf") format("truetype");
+  src: url("./archivo-variablefont_wdth,wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Archivo";
-  src: url("./Archivo-Italic-VariableFont_wdth,wght.ttf") format("truetype");
+  src: url("./archivo-italic-variablefont_wdth,wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "Advent Pro";
-  src: url("./AdventPro-VariableFont_wdth,wght.ttf") format("truetype");
+  src: url("./adventpro-variablefont_wdth,wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: "Advent Pro";
-  src: url("./AdventPro-Italic-VariableFont_wdth,wght.ttf") format("truetype");
+  src: url("./adventpro-italic-variablefont_wdth,wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;

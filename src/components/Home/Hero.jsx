@@ -3,11 +3,11 @@ import { motion, useReducedMotion } from "framer-motion";
 import { LuGraduationCap, LuMapPin } from "react-icons/lu";
 import { APP_BG } from "../../constants/layout";
 import { PROFILE } from "../../constants/profile";
-import { useTranslation } from "../../i18n/useTranslation";
-import { formatBoldText } from "../../utils/formatBoldText";
-import SectionTitle from "../SectionTitle";
+import { useTranslation } from "../../i18n/usetranslation";
+import { formatBoldText } from "../../utils/formatboldtext";
+import SectionTitle from "../section-title";
 import profilePhoto from "../../assets/me2.png";
-import HeroActionGrid from "./HeroActionGrid";
+import HeroActionGrid from "./hero-action-grid";
 import {
   heroButtonItem,
   heroButtonStagger,
@@ -16,7 +16,7 @@ import {
   heroMetaItem,
   heroSeparator,
   heroStagger,
-} from "./heroMotion";
+} from "./hero-motion";
 
 const MotionBox = motion.create(Box);
 const MotionFlex = motion.create(Flex);
